@@ -87,8 +87,48 @@ public class LogIn extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        new PassengerDashboard().setVisible(true);
+        String username = usernameField.getText();
+        String password = new String(passwordField.getPassword());
+
+        // ===== ADMIN CREDENTIALS =====
+        String adminUser = "admin";
+        String adminPass = "admin123";
+        String adminPIN  = "4321";   // <-- set your admin PIN here
+
+        // ===== USER CREDENTIALS =====
+        String normalUser = "user";
+        String normalPass = "user123";
+
+        // ---- ADMIN LOGIN ----
+        if (username.equals(adminUser) && password.equals(adminPass)) {
+            // Step 2: Ask for admin PIN
+            String pinInput = javax.swing.JOptionPane.showInputDialog(
+                this, 
+                "Enter Admin PIN for verification:"
+            );
+
+            if (pinInput == null) {
+                return;
+            }
+
+            if (pinInput.equals(adminPIN)) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Admin Verified!");
+                this.dispose();
+                new AdminDashboard().setVisible(true);
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(this, "Incorrect PIN! Access Denied.");
+            }
+
+        // ---- NORMAL USER LOGIN ----
+        } else if (username.equals(normalUser) && password.equals(normalPass)) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Login Successful!");
+            this.dispose();
+            new PassengerDashboard().setVisible(true);
+
+        // ---- INVALID CREDENTIALS ----
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Invalid username or password!");
+        }
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed

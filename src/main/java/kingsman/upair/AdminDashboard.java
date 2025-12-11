@@ -79,7 +79,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 250, 520));
 
-        topPanel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\SaKaY\\src\\main\\java\\assets\\Top Bar.png")); // NOI18N
+        topPanel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Top Bar.png")); // NOI18N
         getContentPane().add(topPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 80));
 
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));

@@ -123,7 +123,7 @@
     <Component class="javax.swing.JLabel" name="topPanel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\admin\Documents\NetBeansProjects\SaKaY\src\main\java\assets\Top Bar.png"/>
+          <Image iconType="2" name="C:\Users\admin\Documents\NetBeansProjects\UPAir\src\main\java\assets\Top Bar.png"/>
         </Property>
       </Properties>
       <Constraints>
