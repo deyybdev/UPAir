@@ -55,12 +55,14 @@ public class AdminDashboard extends javax.swing.JFrame {
         topPanel = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
         tabPanel = new javax.swing.JTabbedPane();
-        userDashboardPanel = new javax.swing.JPanel();
-        flightsPanel = new javax.swing.JPanel();
-        myBookingsPanel = new javax.swing.JPanel();
-        priceComparisonPanel = new javax.swing.JPanel();
-        profilePanel = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        adminDashboardPanel = new javax.swing.JPanel();
+        managePassengersPanel = new javax.swing.JPanel();
+        manageFlightsPanel = new javax.swing.JPanel();
+        manageSchedulePanel = new javax.swing.JPanel();
+        manageBookingsPanel = new javax.swing.JPanel();
+        manageSeatsPanel = new javax.swing.JPanel();
+        ticketingSystemPanel = new javax.swing.JPanel();
+        adminProfilePanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -200,27 +202,29 @@ public class AdminDashboard extends javax.swing.JFrame {
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        userDashboardPanel.setBackground(new java.awt.Color(255, 255, 0));
-        userDashboardPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        tabPanel.addTab("tab1", userDashboardPanel);
+        adminDashboardPanel.setBackground(new java.awt.Color(255, 255, 0));
+        adminDashboardPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab1", adminDashboardPanel);
 
-        flightsPanel.setBackground(new java.awt.Color(204, 0, 0));
-        flightsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        tabPanel.addTab("tab2", flightsPanel);
+        managePassengersPanel.setBackground(new java.awt.Color(204, 0, 0));
+        managePassengersPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab2", managePassengersPanel);
 
-        myBookingsPanel.setBackground(new java.awt.Color(0, 204, 0));
-        myBookingsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        tabPanel.addTab("tab3", myBookingsPanel);
+        manageFlightsPanel.setBackground(new java.awt.Color(0, 204, 0));
+        manageFlightsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab3", manageFlightsPanel);
 
-        priceComparisonPanel.setBackground(new java.awt.Color(51, 255, 255));
-        priceComparisonPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        tabPanel.addTab("tab4", priceComparisonPanel);
+        manageSchedulePanel.setBackground(new java.awt.Color(51, 255, 255));
+        manageSchedulePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab4", manageSchedulePanel);
 
-        profilePanel.setBackground(new java.awt.Color(255, 204, 204));
-        tabPanel.addTab("tab5", profilePanel);
+        manageBookingsPanel.setBackground(new java.awt.Color(255, 204, 204));
+        tabPanel.addTab("tab5", manageBookingsPanel);
 
-        jPanel1.setBackground(new java.awt.Color(255, 0, 255));
-        tabPanel.addTab("tab6", jPanel1);
+        manageSeatsPanel.setBackground(new java.awt.Color(255, 0, 255));
+        tabPanel.addTab("tab6", manageSeatsPanel);
+        tabPanel.addTab("tab7", ticketingSystemPanel);
+        tabPanel.addTab("tab8", adminProfilePanel);
 
         mainPanel.add(tabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 900, 560));
 
@@ -362,30 +366,32 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel adminDashboard;
+    private javax.swing.JPanel adminDashboardPanel;
+    private javax.swing.JPanel adminProfilePanel;
     private javax.swing.JLabel dividerLabel;
-    private javax.swing.JPanel flightsPanel;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel logOut;
     private javax.swing.JLabel logOutButton;
     private javax.swing.JLabel logOutLabel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel manageBookings;
+    private javax.swing.JPanel manageBookingsPanel;
     private javax.swing.JLabel manageFlights;
+    private javax.swing.JPanel manageFlightsPanel;
     private javax.swing.JLabel managePassenger;
+    private javax.swing.JPanel managePassengersPanel;
     private javax.swing.JLabel manageSchedule;
+    private javax.swing.JPanel manageSchedulePanel;
     private javax.swing.JLabel manageSeats;
-    private javax.swing.JPanel myBookingsPanel;
-    private javax.swing.JPanel priceComparisonPanel;
+    private javax.swing.JPanel manageSeatsPanel;
     private javax.swing.JLabel profileButton;
-    private javax.swing.JPanel profilePanel;
     private javax.swing.JLabel sakayLabel;
     private javax.swing.JLabel searchLabel;
     private javax.swing.JPanel sidePanel;
     private javax.swing.JTabbedPane tabPanel;
     private javax.swing.JLabel ticketingSystem;
+    private javax.swing.JPanel ticketingSystemPanel;
     private javax.swing.JLabel toggleLabel;
     private javax.swing.JLabel topPanel;
-    private javax.swing.JPanel userDashboardPanel;
     private javax.swing.JPanel userProfile;
     private javax.swing.JLabel username;
     private javax.swing.JLabel welcomeLabel;

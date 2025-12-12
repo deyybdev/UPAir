@@ -55,10 +55,10 @@ public class PassengerDashboard extends javax.swing.JFrame {
         tabPanel = new javax.swing.JTabbedPane();
         userDashboardPanel = new javax.swing.JPanel();
         flightsPanel = new javax.swing.JPanel();
+        bookingPanel = new javax.swing.JPanel();
         myBookingsPanel = new javax.swing.JPanel();
         priceComparisonPanel = new javax.swing.JPanel();
         profilePanel = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -190,19 +190,19 @@ public class PassengerDashboard extends javax.swing.JFrame {
         flightsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         tabPanel.addTab("tab2", flightsPanel);
 
-        myBookingsPanel.setBackground(new java.awt.Color(0, 204, 0));
+        bookingPanel.setBackground(new java.awt.Color(0, 204, 0));
+        bookingPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab3", bookingPanel);
+
+        myBookingsPanel.setBackground(new java.awt.Color(51, 255, 255));
         myBookingsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        tabPanel.addTab("tab3", myBookingsPanel);
+        tabPanel.addTab("tab4", myBookingsPanel);
 
-        priceComparisonPanel.setBackground(new java.awt.Color(51, 255, 255));
-        priceComparisonPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        tabPanel.addTab("tab4", priceComparisonPanel);
+        priceComparisonPanel.setBackground(new java.awt.Color(255, 204, 204));
+        tabPanel.addTab("tab5", priceComparisonPanel);
 
-        profilePanel.setBackground(new java.awt.Color(255, 204, 204));
-        tabPanel.addTab("tab5", profilePanel);
-
-        jPanel1.setBackground(new java.awt.Color(255, 0, 255));
-        tabPanel.addTab("tab6", jPanel1);
+        profilePanel.setBackground(new java.awt.Color(255, 0, 255));
+        tabPanel.addTab("tab6", profilePanel);
 
         mainPanel.add(tabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 900, 560));
 
@@ -246,7 +246,7 @@ public class PassengerDashboard extends javax.swing.JFrame {
 
     private void priceComparisonButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_priceComparisonButtonMouseClicked
         // TODO add your handling code here:
-        tabPanel.setSelectedIndex(5);
+        tabPanel.setSelectedIndex(4);
     }//GEN-LAST:event_priceComparisonButtonMouseClicked
 
     private void logOutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logOutButtonMouseClicked
@@ -269,6 +269,7 @@ public class PassengerDashboard extends javax.swing.JFrame {
 
     private void profileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileButtonMouseClicked
         // TODO add your handling code here:
+        tabPanel.setSelectedIndex(5);
     }//GEN-LAST:event_profileButtonMouseClicked
 
     private void animateMenu(boolean expand) {
@@ -339,11 +340,11 @@ public class PassengerDashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bookingButton;
+    private javax.swing.JPanel bookingPanel;
     private javax.swing.JLabel dashboardButton;
     private javax.swing.JLabel dividerLabel;
     private javax.swing.JLabel flightsButton;
     private javax.swing.JPanel flightsPanel;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel logOut;
     private javax.swing.JLabel logOutButton;
     private javax.swing.JLabel logOutLabel;
