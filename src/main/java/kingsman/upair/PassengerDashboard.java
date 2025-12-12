@@ -37,12 +37,23 @@ public class PassengerDashboard extends javax.swing.JFrame {
         welcomeLabel = new javax.swing.JLabel();
         dividerLabel = new javax.swing.JLabel();
         sidePanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        dashboardButton = new javax.swing.JLabel();
+        flightsButton = new javax.swing.JLabel();
+        myBookingsButton = new javax.swing.JLabel();
+        bookingButton = new javax.swing.JLabel();
+        priceComparisonButton = new javax.swing.JLabel();
+        profile = new javax.swing.JPanel();
+        username = new javax.swing.JLabel();
+        profileButton = new javax.swing.JLabel();
         topPanel = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
+        tabPanel = new javax.swing.JTabbedPane();
+        userDashboardPanel = new javax.swing.JPanel();
+        flightsPanel = new javax.swing.JPanel();
+        myBookingsPanel = new javax.swing.JPanel();
+        priceComparisonPanel = new javax.swing.JPanel();
+        profilePanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -82,17 +93,63 @@ public class PassengerDashboard extends javax.swing.JFrame {
         sidePanel.setPreferredSize(new java.awt.Dimension(250, 520));
         sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Price Comparison.png")); // NOI18N
-        sidePanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 210, -1));
+        dashboardButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Dashboard.png")); // NOI18N
+        dashboardButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dashboardButtonMouseClicked(evt);
+            }
+        });
+        sidePanel.add(dashboardButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 240, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Dashboard.png")); // NOI18N
-        sidePanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 210, -1));
+        flightsButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Flights.png")); // NOI18N
+        flightsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flightsButtonMouseClicked(evt);
+            }
+        });
+        sidePanel.add(flightsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 240, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Flight Schedule.png")); // NOI18N
-        sidePanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 210, -1));
+        myBookingsButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\My Bookings.png")); // NOI18N
+        myBookingsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                myBookingsButtonMouseClicked(evt);
+            }
+        });
+        sidePanel.add(myBookingsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 240, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\My Bookings.png")); // NOI18N
-        sidePanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 210, -1));
+        bookingButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Bookings.png")); // NOI18N
+        bookingButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bookingButtonMouseClicked(evt);
+            }
+        });
+        sidePanel.add(bookingButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 240, -1));
+
+        priceComparisonButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Price Comparison.png")); // NOI18N
+        priceComparisonButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                priceComparisonButtonMouseClicked(evt);
+            }
+        });
+        sidePanel.add(priceComparisonButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 240, -1));
+
+        profile.setBackground(new java.awt.Color(1, 31, 82));
+        profile.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        username.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        username.setForeground(new java.awt.Color(255, 255, 255));
+        username.setText("User");
+        profile.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
+
+        profileButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Profile.png")); // NOI18N
+        profileButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileButtonMouseClicked(evt);
+            }
+        });
+        profile.add(profileButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 130, -1));
+
+        sidePanel.add(profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 130, 50));
 
         getContentPane().add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 250, 520));
 
@@ -101,6 +158,31 @@ public class PassengerDashboard extends javax.swing.JFrame {
 
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        userDashboardPanel.setBackground(new java.awt.Color(255, 255, 0));
+        userDashboardPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab1", userDashboardPanel);
+
+        flightsPanel.setBackground(new java.awt.Color(204, 0, 0));
+        flightsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab2", flightsPanel);
+
+        myBookingsPanel.setBackground(new java.awt.Color(0, 204, 0));
+        myBookingsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab3", myBookingsPanel);
+
+        priceComparisonPanel.setBackground(new java.awt.Color(51, 255, 255));
+        priceComparisonPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tabPanel.addTab("tab4", priceComparisonPanel);
+
+        profilePanel.setBackground(new java.awt.Color(255, 204, 204));
+        tabPanel.addTab("tab5", profilePanel);
+
+        jPanel1.setBackground(new java.awt.Color(255, 0, 255));
+        tabPanel.addTab("tab6", jPanel1);
+
+        mainPanel.add(tabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 900, 560));
+
         getContentPane().add(mainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 900, 520));
 
         pack();
@@ -118,6 +200,36 @@ public class PassengerDashboard extends javax.swing.JFrame {
     private void searchLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchLabelMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_searchLabelMouseClicked
+
+    private void dashboardButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardButtonMouseClicked
+        // TODO add your handling code here:
+        tabPanel.setSelectedIndex(0);
+    }//GEN-LAST:event_dashboardButtonMouseClicked
+
+    private void flightsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flightsButtonMouseClicked
+        // TODO add your handling code here:
+        tabPanel.setSelectedIndex(1);
+    }//GEN-LAST:event_flightsButtonMouseClicked
+
+    private void myBookingsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myBookingsButtonMouseClicked
+        // TODO add your handling code here:
+        tabPanel.setSelectedIndex(3);
+    }//GEN-LAST:event_myBookingsButtonMouseClicked
+
+    private void profileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileButtonMouseClicked
+        // TODO add your handling code here:
+        tabPanel.setSelectedIndex(4);
+    }//GEN-LAST:event_profileButtonMouseClicked
+
+    private void bookingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bookingButtonMouseClicked
+        // TODO add your handling code here:
+        tabPanel.setSelectedIndex(2);
+    }//GEN-LAST:event_bookingButtonMouseClicked
+
+    private void priceComparisonButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_priceComparisonButtonMouseClicked
+        // TODO add your handling code here:
+        tabPanel.setSelectedIndex(5);
+    }//GEN-LAST:event_priceComparisonButtonMouseClicked
 
     private void animateMenu(boolean expand) {
         if (timer != null && timer.isRunning()) {
@@ -186,17 +298,28 @@ public class PassengerDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bookingButton;
+    private javax.swing.JLabel dashboardButton;
     private javax.swing.JLabel dividerLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel flightsButton;
+    private javax.swing.JPanel flightsPanel;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JLabel myBookingsButton;
+    private javax.swing.JPanel myBookingsPanel;
+    private javax.swing.JLabel priceComparisonButton;
+    private javax.swing.JPanel priceComparisonPanel;
+    private javax.swing.JPanel profile;
+    private javax.swing.JLabel profileButton;
+    private javax.swing.JPanel profilePanel;
     private javax.swing.JLabel sakayLabel;
     private javax.swing.JLabel searchLabel;
     private javax.swing.JPanel sidePanel;
+    private javax.swing.JTabbedPane tabPanel;
     private javax.swing.JLabel toggleLabel;
     private javax.swing.JLabel topPanel;
+    private javax.swing.JPanel userDashboardPanel;
+    private javax.swing.JLabel username;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }
