@@ -37,6 +37,18 @@ public class AdminDashboard extends javax.swing.JFrame {
         welcomeLabel = new javax.swing.JLabel();
         dividerLabel = new javax.swing.JLabel();
         sidePanel = new javax.swing.JPanel();
+        ticketingSystem = new javax.swing.JLabel();
+        managePassenger = new javax.swing.JLabel();
+        manageFlights = new javax.swing.JLabel();
+        manageSchedule = new javax.swing.JLabel();
+        ManageBookings = new javax.swing.JLabel();
+        manageSeats = new javax.swing.JLabel();
+        userProfile = new javax.swing.JPanel();
+        username = new javax.swing.JLabel();
+        profileButton = new javax.swing.JLabel();
+        logOut = new javax.swing.JPanel();
+        logOutLabel = new javax.swing.JLabel();
+        logOutButton = new javax.swing.JLabel();
         topPanel = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
 
@@ -77,6 +89,91 @@ public class AdminDashboard extends javax.swing.JFrame {
         sidePanel.setBackground(new java.awt.Color(1, 31, 82));
         sidePanel.setPreferredSize(new java.awt.Dimension(250, 520));
         sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ticketingSystem.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Ticketing System.png")); // NOI18N
+        ticketingSystem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ticketingSystemMouseClicked(evt);
+            }
+        });
+        sidePanel.add(ticketingSystem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 240, -1));
+
+        managePassenger.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Manage Passengers.png")); // NOI18N
+        managePassenger.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                managePassengerMouseClicked(evt);
+            }
+        });
+        sidePanel.add(managePassenger, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 240, -1));
+
+        manageFlights.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Manage Flights.png")); // NOI18N
+        manageFlights.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manageFlightsMouseClicked(evt);
+            }
+        });
+        sidePanel.add(manageFlights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 240, -1));
+
+        manageSchedule.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Manage Schedule.png")); // NOI18N
+        manageSchedule.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manageScheduleMouseClicked(evt);
+            }
+        });
+        sidePanel.add(manageSchedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 240, -1));
+
+        ManageBookings.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Manage Bookings.png")); // NOI18N
+        ManageBookings.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ManageBookingsMouseClicked(evt);
+            }
+        });
+        sidePanel.add(ManageBookings, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 240, -1));
+
+        manageSeats.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Manage Seats.png")); // NOI18N
+        manageSeats.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manageSeatsMouseClicked(evt);
+            }
+        });
+        sidePanel.add(manageSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 240, -1));
+
+        userProfile.setBackground(new java.awt.Color(1, 31, 82));
+        userProfile.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        username.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        username.setForeground(new java.awt.Color(255, 255, 255));
+        username.setText("User");
+        userProfile.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
+
+        profileButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Profile.png")); // NOI18N
+        profileButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileButtonMouseClicked(evt);
+            }
+        });
+        userProfile.add(profileButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 110, -1));
+
+        sidePanel.add(userProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 150, 50));
+
+        logOut.setBackground(new java.awt.Color(1, 31, 82));
+        logOut.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        logOutLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        logOutLabel.setForeground(new java.awt.Color(255, 255, 255));
+        logOutLabel.setText("Log out");
+        logOut.add(logOutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
+
+        logOutButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Log Out.png")); // NOI18N
+        logOutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logOutButtonMouseClicked(evt);
+            }
+        });
+        logOut.add(logOutButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 130, -1));
+
+        sidePanel.add(logOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 160, 50));
+
         getContentPane().add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 250, 520));
 
         topPanel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Top Bar.png")); // NOI18N
@@ -101,6 +198,53 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void searchLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchLabelMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_searchLabelMouseClicked
+
+    private void ticketingSystemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ticketingSystemMouseClicked
+        // TODO add your handling code here:
+        tabPanel.setSelectedIndex(0);
+    }//GEN-LAST:event_ticketingSystemMouseClicked
+
+    private void managePassengerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_managePassengerMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_managePassengerMouseClicked
+
+    private void manageFlightsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageFlightsMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manageFlightsMouseClicked
+
+    private void manageScheduleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageScheduleMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manageScheduleMouseClicked
+
+    private void ManageBookingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageBookingsMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ManageBookingsMouseClicked
+
+    private void manageSeatsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageSeatsMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manageSeatsMouseClicked
+
+    private void profileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_profileButtonMouseClicked
+
+    private void logOutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logOutButtonMouseClicked
+        // TODO add your handling code here:
+        int choice = javax.swing.JOptionPane.showConfirmDialog(
+            this,
+            "Are you sure you want to log out?",
+            "Logout",
+            JOptionPane.YES_NO_OPTION
+        );
+
+        if (choice == JOptionPane.YES_OPTION) {
+            // Close the current window
+            this.dispose();
+
+            // Open login screen again
+            new LogIn().setVisible(true);
+        }
+    }//GEN-LAST:event_logOutButtonMouseClicked
 
     private void animateMenu(boolean expand) {
         if (timer != null && timer.isRunning()) {
@@ -171,13 +315,25 @@ public class AdminDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ManageBookings;
     private javax.swing.JLabel dividerLabel;
+    private javax.swing.JPanel logOut;
+    private javax.swing.JLabel logOutButton;
+    private javax.swing.JLabel logOutLabel;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JLabel manageFlights;
+    private javax.swing.JLabel managePassenger;
+    private javax.swing.JLabel manageSchedule;
+    private javax.swing.JLabel manageSeats;
+    private javax.swing.JLabel profileButton;
     private javax.swing.JLabel sakayLabel;
     private javax.swing.JLabel searchLabel;
     private javax.swing.JPanel sidePanel;
+    private javax.swing.JLabel ticketingSystem;
     private javax.swing.JLabel toggleLabel;
     private javax.swing.JLabel topPanel;
+    private javax.swing.JPanel userProfile;
+    private javax.swing.JLabel username;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }

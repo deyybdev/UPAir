@@ -4,6 +4,8 @@
  */
 package kingsman.upair;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author admin
@@ -42,9 +44,12 @@ public class PassengerDashboard extends javax.swing.JFrame {
         myBookingsButton = new javax.swing.JLabel();
         bookingButton = new javax.swing.JLabel();
         priceComparisonButton = new javax.swing.JLabel();
-        profile = new javax.swing.JPanel();
+        userProfile = new javax.swing.JPanel();
         username = new javax.swing.JLabel();
         profileButton = new javax.swing.JLabel();
+        logOut = new javax.swing.JPanel();
+        logOutLabel = new javax.swing.JLabel();
+        logOutButton = new javax.swing.JLabel();
         topPanel = new javax.swing.JLabel();
         mainPanel = new javax.swing.JPanel();
         tabPanel = new javax.swing.JTabbedPane();
@@ -133,13 +138,13 @@ public class PassengerDashboard extends javax.swing.JFrame {
         });
         sidePanel.add(priceComparisonButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 240, -1));
 
-        profile.setBackground(new java.awt.Color(1, 31, 82));
-        profile.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        userProfile.setBackground(new java.awt.Color(1, 31, 82));
+        userProfile.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         username.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         username.setForeground(new java.awt.Color(255, 255, 255));
         username.setText("User");
-        profile.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
+        userProfile.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
 
         profileButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Profile.png")); // NOI18N
         profileButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -147,9 +152,27 @@ public class PassengerDashboard extends javax.swing.JFrame {
                 profileButtonMouseClicked(evt);
             }
         });
-        profile.add(profileButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 130, -1));
+        userProfile.add(profileButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 110, -1));
 
-        sidePanel.add(profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 130, 50));
+        sidePanel.add(userProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 150, 50));
+
+        logOut.setBackground(new java.awt.Color(1, 31, 82));
+        logOut.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        logOutLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        logOutLabel.setForeground(new java.awt.Color(255, 255, 255));
+        logOutLabel.setText("Log out");
+        logOut.add(logOutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
+
+        logOutButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Log Out.png")); // NOI18N
+        logOutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logOutButtonMouseClicked(evt);
+            }
+        });
+        logOut.add(logOutButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 130, -1));
+
+        sidePanel.add(logOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 160, 50));
 
         getContentPane().add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 250, 520));
 
@@ -216,11 +239,6 @@ public class PassengerDashboard extends javax.swing.JFrame {
         tabPanel.setSelectedIndex(3);
     }//GEN-LAST:event_myBookingsButtonMouseClicked
 
-    private void profileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileButtonMouseClicked
-        // TODO add your handling code here:
-        tabPanel.setSelectedIndex(4);
-    }//GEN-LAST:event_profileButtonMouseClicked
-
     private void bookingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bookingButtonMouseClicked
         // TODO add your handling code here:
         tabPanel.setSelectedIndex(2);
@@ -230,6 +248,28 @@ public class PassengerDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         tabPanel.setSelectedIndex(5);
     }//GEN-LAST:event_priceComparisonButtonMouseClicked
+
+    private void logOutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logOutButtonMouseClicked
+        // TODO add your handling code here:
+        int choice = javax.swing.JOptionPane.showConfirmDialog(
+            this,
+            "Are you sure you want to log out?",
+            "Logout",
+            JOptionPane.YES_NO_OPTION
+        );
+
+        if (choice == JOptionPane.YES_OPTION) {
+            // Close the current window
+            this.dispose();
+
+            // Open login screen again
+            new LogIn().setVisible(true);
+        }
+    }//GEN-LAST:event_logOutButtonMouseClicked
+
+    private void profileButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_profileButtonMouseClicked
 
     private void animateMenu(boolean expand) {
         if (timer != null && timer.isRunning()) {
@@ -304,12 +344,14 @@ public class PassengerDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel flightsButton;
     private javax.swing.JPanel flightsPanel;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel logOut;
+    private javax.swing.JLabel logOutButton;
+    private javax.swing.JLabel logOutLabel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel myBookingsButton;
     private javax.swing.JPanel myBookingsPanel;
     private javax.swing.JLabel priceComparisonButton;
     private javax.swing.JPanel priceComparisonPanel;
-    private javax.swing.JPanel profile;
     private javax.swing.JLabel profileButton;
     private javax.swing.JPanel profilePanel;
     private javax.swing.JLabel sakayLabel;
@@ -319,6 +361,7 @@ public class PassengerDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel toggleLabel;
     private javax.swing.JLabel topPanel;
     private javax.swing.JPanel userDashboardPanel;
+    private javax.swing.JPanel userProfile;
     private javax.swing.JLabel username;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
