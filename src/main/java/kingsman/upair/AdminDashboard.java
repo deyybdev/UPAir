@@ -4,6 +4,8 @@
  */
 package kingsman.upair;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author admin
@@ -201,7 +203,6 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void ticketingSystemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ticketingSystemMouseClicked
         // TODO add your handling code here:
-        tabPanel.setSelectedIndex(0);
     }//GEN-LAST:event_ticketingSystemMouseClicked
 
     private void managePassengerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_managePassengerMouseClicked
