@@ -36,8 +36,6 @@ public class AdminDashboard extends javax.swing.JFrame {
         sakayLabel = new javax.swing.JLabel();
         toggleLabel = new javax.swing.JLabel();
         searchLabel = new javax.swing.JLabel();
-        welcomeLabel = new javax.swing.JLabel();
-        dividerLabel = new javax.swing.JLabel();
         sidePanel = new javax.swing.JPanel();
         ticketingSystem = new javax.swing.JLabel();
         adminDashboard = new javax.swing.JLabel();
@@ -78,25 +76,13 @@ public class AdminDashboard extends javax.swing.JFrame {
         });
         getContentPane().add(toggleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 30));
 
-        searchLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\SaKaY\\src\\main\\java\\assets\\Search  Button.png")); // NOI18N
+        searchLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Notifications.png")); // NOI18N
         searchLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 searchLabelMouseClicked(evt);
             }
         });
         getContentPane().add(searchLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 30, -1, 30));
-
-        welcomeLabel.setFont(new java.awt.Font("Arial", 1, 26)); // NOI18N
-        welcomeLabel.setForeground(new java.awt.Color(255, 255, 255));
-        welcomeLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        welcomeLabel.setText("Welcome, Juan!");
-        getContentPane().add(welcomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, -1));
-
-        dividerLabel.setFont(new java.awt.Font("Arial Narrow", 0, 48)); // NOI18N
-        dividerLabel.setForeground(new java.awt.Color(63, 164, 251));
-        dividerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        dividerLabel.setText("|");
-        getContentPane().add(dividerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 0, 30, 80));
 
         sidePanel.setBackground(new java.awt.Color(1, 31, 82));
         sidePanel.setPreferredSize(new java.awt.Dimension(250, 520));
@@ -368,7 +354,6 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel adminDashboard;
     private javax.swing.JPanel adminDashboardPanel;
     private javax.swing.JPanel adminProfilePanel;
-    private javax.swing.JLabel dividerLabel;
     private javax.swing.JPanel logOut;
     private javax.swing.JLabel logOutButton;
     private javax.swing.JLabel logOutLabel;
@@ -394,6 +379,5 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel topPanel;
     private javax.swing.JPanel userProfile;
     private javax.swing.JLabel username;
-    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }
