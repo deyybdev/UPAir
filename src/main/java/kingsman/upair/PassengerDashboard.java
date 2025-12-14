@@ -97,11 +97,6 @@ public class PassengerDashboard extends javax.swing.JFrame {
 
         toggleLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\SaKaY\\src\\main\\java\\assets\\ToggleButton.png")); // NOI18N
         toggleLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        toggleLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                toggleLabelMousePressed(evt);
-            }
-        });
         getContentPane().add(toggleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 30));
 
         searchLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Notifications.png")); // NOI18N
