@@ -36,6 +36,9 @@ public class AdminFrame extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         topPanel = new javax.swing.JPanel();
         headerLabel = new javax.swing.JLabel();
+        logOutButton = new javax.swing.JButton();
+        userProfileButton = new javax.swing.JButton();
+        username = new javax.swing.JLabel();
         sidePanel = new javax.swing.JPanel();
         dashboardButton = new javax.swing.JButton();
         manageFlightsButton = new javax.swing.JButton();
@@ -111,89 +114,101 @@ public class AdminFrame extends javax.swing.JFrame {
         moreDetails = new javax.swing.JTextArea();
         addOfferButton = new javax.swing.JButton();
         manageSchedulePanel = new javax.swing.JPanel();
-        manageFlightsHeaderPanel1 = new javax.swing.JPanel();
-        manageFlightsHeaderLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        addOfferButton3 = new javax.swing.JButton();
-        addOfferButton1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        seatTypeLabel1 = new javax.swing.JLabel();
-        seatTypeLabel2 = new javax.swing.JLabel();
-        seatTypeLabel3 = new javax.swing.JLabel();
-        seatTypeLabel4 = new javax.swing.JLabel();
-        seatTypeLabel5 = new javax.swing.JLabel();
-        foodAndBeverages2 = new javax.swing.JComboBox<>();
-        foodAndBeverages3 = new javax.swing.JComboBox<>();
-        foodAndBeverages4 = new javax.swing.JComboBox<>();
-        seatTypeLabel6 = new javax.swing.JLabel();
-        seatTypeLabel7 = new javax.swing.JLabel();
-        seatTypeLabel8 = new javax.swing.JLabel();
-        foodAndBeverages5 = new javax.swing.JComboBox<>();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jSpinner1 = new javax.swing.JSpinner();
-        jSpinner2 = new javax.swing.JSpinner();
-        addOfferButton2 = new javax.swing.JButton();
+        manageScheduleHeaderPanel = new javax.swing.JPanel();
+        manageScheduleHeaderLabel = new javax.swing.JLabel();
+        scheduledFlightsPanel = new javax.swing.JPanel();
+        scheduledFlightsScrollPane = new javax.swing.JScrollPane();
+        scheduledFlightsTable = new javax.swing.JTable();
+        deleteSelectedButton = new javax.swing.JButton();
+        editSelectedButton = new javax.swing.JButton();
+        addFlightSchedulePanel = new javax.swing.JPanel();
+        timeScheduleLabel = new javax.swing.JLabel();
+        airlineLabel = new javax.swing.JLabel();
+        flightCodeScheduleLabel = new javax.swing.JLabel();
+        originScheduleLabel = new javax.swing.JLabel();
+        destinationScheduleLabel = new javax.swing.JLabel();
+        airline = new javax.swing.JComboBox<>();
+        originSchedule = new javax.swing.JComboBox<>();
+        detailsLabel = new javax.swing.JLabel();
+        departureLabel = new javax.swing.JLabel();
+        dateScheduleLabel = new javax.swing.JLabel();
+        destinationSchedule = new javax.swing.JComboBox<>();
+        dateChooserSchedule = new com.toedter.calendar.JDateChooser();
+        hourTimeSchedule = new javax.swing.JSpinner();
+        minuteScheduleLabel = new javax.swing.JSpinner();
+        addScheduleButton = new javax.swing.JButton();
+        flightCodeSchedule = new javax.swing.JTextField();
         manageBookingsPanel = new javax.swing.JPanel();
         bookingsMainPanel = new javax.swing.JPanel();
         manageBookingsHeaderPanel = new javax.swing.JPanel();
         manageBookingsHeaderLabel = new javax.swing.JLabel();
         bookingsPanel = new javax.swing.JPanel();
-        addOfferButton4 = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        addOfferButton5 = new javax.swing.JButton();
-        addOfferButton6 = new javax.swing.JButton();
-        addOfferButton7 = new javax.swing.JButton();
+        viewSelectedButton = new javax.swing.JButton();
+        manageBookingsScrollPane = new javax.swing.JScrollPane();
+        manageBookingsTable = new javax.swing.JTable();
+        approveHistoryButton = new javax.swing.JButton();
+        cancelSelectedButton = new javax.swing.JButton();
+        approveSelectedButton = new javax.swing.JButton();
         approvedBookingsHistory = new javax.swing.JPanel();
-        recentFlightsLabel1 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        addOfferButton8 = new javax.swing.JButton();
+        approveBookingsHistoryLabel = new javax.swing.JLabel();
+        approvedBookingsScrollPane = new javax.swing.JScrollPane();
+        approvedBookingsTable = new javax.swing.JTable();
+        backToBookingsButton = new javax.swing.JButton();
         personalBookingDetails = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        seatTypeLabel9 = new javax.swing.JLabel();
-        seatTypeLabel10 = new javax.swing.JLabel();
-        seatTypeLabel11 = new javax.swing.JLabel();
-        seatTypeLabel12 = new javax.swing.JLabel();
-        seatTypeLabel13 = new javax.swing.JLabel();
-        seatTypeLabel14 = new javax.swing.JLabel();
-        seatTypeLabel15 = new javax.swing.JLabel();
-        seatTypeLabel16 = new javax.swing.JLabel();
-        seatTypeLabel17 = new javax.swing.JLabel();
-        seatTypeLabel18 = new javax.swing.JLabel();
-        seatTypeLabel19 = new javax.swing.JLabel();
-        seatTypeLabel20 = new javax.swing.JLabel();
-        seatTypeLabel21 = new javax.swing.JLabel();
-        seatTypeLabel22 = new javax.swing.JLabel();
-        seatTypeLabel23 = new javax.swing.JLabel();
-        seatTypeLabel24 = new javax.swing.JLabel();
-        seatTypeLabel25 = new javax.swing.JLabel();
-        seatTypeLabel26 = new javax.swing.JLabel();
-        selectedAirlineLabel1 = new javax.swing.JLabel();
-        selectedAirlineLabel2 = new javax.swing.JLabel();
-        addOfferButton9 = new javax.swing.JButton();
+        profilePhotoPanel = new javax.swing.JPanel();
+        profilePhotoLabel = new javax.swing.JLabel();
+        userDetailsPanel = new javax.swing.JPanel();
+        flightDateLabel = new javax.swing.JLabel();
+        userRequest = new javax.swing.JLabel();
+        routeLabel = new javax.swing.JLabel();
+        categoryLabel = new javax.swing.JLabel();
+        otherInfoLabel = new javax.swing.JLabel();
+        paymentLabel = new javax.swing.JLabel();
+        noOfPassengerLabel = new javax.swing.JLabel();
+        passengersBookedLabel = new javax.swing.JLabel();
+        seatsLabel = new javax.swing.JLabel();
+        userAddressLabel = new javax.swing.JLabel();
+        userAddress = new javax.swing.JLabel();
+        route = new javax.swing.JLabel();
+        category = new javax.swing.JLabel();
+        flightDate = new javax.swing.JLabel();
+        paymentMode = new javax.swing.JLabel();
+        noOfPassenger = new javax.swing.JLabel();
+        passengersName = new javax.swing.JLabel();
+        seats = new javax.swing.JLabel();
+        bookingID = new javax.swing.JLabel();
+        userName = new javax.swing.JLabel();
+        backToButton = new javax.swing.JButton();
         manageSeatsPanel = new javax.swing.JPanel();
         manageSeatsHeaderPanel = new javax.swing.JPanel();
         manageSeatsHeaderLabel = new javax.swing.JLabel();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
+        manageSeats = new javax.swing.JPanel();
+        manageSeatsScrollPane = new javax.swing.JScrollPane();
+        seatsTable = new javax.swing.JTable();
+        viewSelectedButtonSeats = new javax.swing.JButton();
+        dateLabelSeats = new javax.swing.JLabel();
+        scheduleID = new javax.swing.JTextField();
+        searchScheduleLabel = new javax.swing.JLabel();
+        originLabelSeats = new javax.swing.JLabel();
+        seatsDateChooser = new com.toedter.calendar.JDateChooser();
+        destinationLabelSeats = new javax.swing.JLabel();
+        destinationComboBox = new javax.swing.JComboBox<>();
+        originComboBox = new javax.swing.JComboBox<>();
+        seatsScrollPane = new javax.swing.JScrollPane();
+        seatsPanell = new javax.swing.JPanel();
+        abSectionSeats = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        B1 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        B4 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
+        B6 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
@@ -203,7 +218,7 @@ public class AdminFrame extends javax.swing.JFrame {
         jButton24 = new javax.swing.JButton();
         jButton25 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
+        B11 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
         jButton29 = new javax.swing.JButton();
         jButton30 = new javax.swing.JButton();
@@ -214,17 +229,27 @@ public class AdminFrame extends javax.swing.JFrame {
         jButton35 = new javax.swing.JButton();
         jButton36 = new javax.swing.JButton();
         jButton37 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
+        A17 = new javax.swing.JButton();
         jButton39 = new javax.swing.JButton();
         jButton40 = new javax.swing.JButton();
         jButton41 = new javax.swing.JButton();
-        jButton42 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
+        A19 = new javax.swing.JButton();
+        B19 = new javax.swing.JButton();
         jButton44 = new javax.swing.JButton();
         jButton45 = new javax.swing.JButton();
-        jPanel11 = new javax.swing.JPanel();
+        abSectionSeats1 = new javax.swing.JPanel();
+        jButton7 = new javax.swing.JButton();
+        B2 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jButton38 = new javax.swing.JButton();
+        jButton42 = new javax.swing.JButton();
+        B5 = new javax.swing.JButton();
+        jButton43 = new javax.swing.JButton();
         jButton46 = new javax.swing.JButton();
         jButton47 = new javax.swing.JButton();
+        B7 = new javax.swing.JButton();
         jButton48 = new javax.swing.JButton();
         jButton49 = new javax.swing.JButton();
         jButton50 = new javax.swing.JButton();
@@ -234,6 +259,7 @@ public class AdminFrame extends javax.swing.JFrame {
         jButton54 = new javax.swing.JButton();
         jButton55 = new javax.swing.JButton();
         jButton56 = new javax.swing.JButton();
+        B12 = new javax.swing.JButton();
         jButton57 = new javax.swing.JButton();
         jButton58 = new javax.swing.JButton();
         jButton59 = new javax.swing.JButton();
@@ -244,37 +270,14 @@ public class AdminFrame extends javax.swing.JFrame {
         jButton64 = new javax.swing.JButton();
         jButton65 = new javax.swing.JButton();
         jButton66 = new javax.swing.JButton();
+        A18 = new javax.swing.JButton();
         jButton67 = new javax.swing.JButton();
         jButton68 = new javax.swing.JButton();
         jButton69 = new javax.swing.JButton();
+        A20 = new javax.swing.JButton();
+        B20 = new javax.swing.JButton();
         jButton70 = new javax.swing.JButton();
         jButton71 = new javax.swing.JButton();
-        jButton72 = new javax.swing.JButton();
-        jButton73 = new javax.swing.JButton();
-        jButton74 = new javax.swing.JButton();
-        jButton75 = new javax.swing.JButton();
-        jButton76 = new javax.swing.JButton();
-        jButton77 = new javax.swing.JButton();
-        jButton78 = new javax.swing.JButton();
-        jButton79 = new javax.swing.JButton();
-        jButton80 = new javax.swing.JButton();
-        jButton81 = new javax.swing.JButton();
-        jButton82 = new javax.swing.JButton();
-        jButton83 = new javax.swing.JButton();
-        jButton84 = new javax.swing.JButton();
-        jButton85 = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTable5 = new javax.swing.JTable();
-        addOfferButton10 = new javax.swing.JButton();
-        destinationLabel1 = new javax.swing.JLabel();
-        flightCode1 = new javax.swing.JTextField();
-        destinationLabel2 = new javax.swing.JLabel();
-        destinationLabel3 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        destinationLabel4 = new javax.swing.JLabel();
-        foodAndBeverages6 = new javax.swing.JComboBox<>();
-        foodAndBeverages7 = new javax.swing.JComboBox<>();
 
         jButton3.setText("jButton3");
 
@@ -290,6 +293,40 @@ public class AdminFrame extends javax.swing.JFrame {
         headerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         headerLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Title.png")); // NOI18N
         topPanel.add(headerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 60));
+
+        logOutButton.setBackground(new java.awt.Color(255, 255, 255));
+        logOutButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        logOutButton.setForeground(new java.awt.Color(255, 255, 255));
+        logOutButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Log Out.png")); // NOI18N
+        logOutButton.setBorderPainted(false);
+        logOutButton.setContentAreaFilled(false);
+        logOutButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        logOutButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        logOutButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        logOutButton.setIconTextGap(0);
+        topPanel.add(logOutButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 50, 60));
+
+        userProfileButton.setBackground(new java.awt.Color(255, 255, 255));
+        userProfileButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        userProfileButton.setForeground(new java.awt.Color(255, 255, 255));
+        userProfileButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Profile Icon.png")); // NOI18N
+        userProfileButton.setBorderPainted(false);
+        userProfileButton.setContentAreaFilled(false);
+        userProfileButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        userProfileButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        userProfileButton.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        userProfileButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userProfileButtonActionPerformed(evt);
+            }
+        });
+        topPanel.add(userProfileButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 0, -1, 60));
+
+        username.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        username.setForeground(new java.awt.Color(255, 255, 255));
+        username.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        username.setText("ADMINISTRATOR");
+        topPanel.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 0, 160, 60));
 
         getContentPane().add(topPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 60));
 
@@ -822,25 +859,25 @@ public class AdminFrame extends javax.swing.JFrame {
         manageSchedulePanel.setBackground(new java.awt.Color(255, 255, 255));
         manageSchedulePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        manageFlightsHeaderPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        manageFlightsHeaderPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        manageFlightsHeaderPanel1.setForeground(new java.awt.Color(255, 255, 255));
-        manageFlightsHeaderPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        manageScheduleHeaderPanel.setBackground(new java.awt.Color(204, 204, 204));
+        manageScheduleHeaderPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        manageScheduleHeaderPanel.setForeground(new java.awt.Color(255, 255, 255));
+        manageScheduleHeaderPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        manageFlightsHeaderLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 55)); // NOI18N
-        manageFlightsHeaderLabel1.setForeground(new java.awt.Color(60, 63, 65));
-        manageFlightsHeaderLabel1.setText("MANAGE SCHEDULES");
-        manageFlightsHeaderPanel1.add(manageFlightsHeaderLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 580, 60));
+        manageScheduleHeaderLabel.setFont(new java.awt.Font("Bahnschrift", 1, 55)); // NOI18N
+        manageScheduleHeaderLabel.setForeground(new java.awt.Color(60, 63, 65));
+        manageScheduleHeaderLabel.setText("MANAGE SCHEDULES");
+        manageScheduleHeaderPanel.add(manageScheduleHeaderLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 580, 60));
 
-        manageSchedulePanel.add(manageFlightsHeaderPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 910, 70));
+        manageSchedulePanel.add(manageScheduleHeaderPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 910, 70));
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, " Scheduled Flights", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        scheduledFlightsPanel.setBackground(new java.awt.Color(204, 204, 204));
+        scheduledFlightsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, " Scheduled Flights", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
+        scheduledFlightsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable2.setBackground(new java.awt.Color(255, 255, 255));
-        jTable2.setForeground(new java.awt.Color(0, 0, 0));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        scheduledFlightsTable.setBackground(new java.awt.Color(255, 255, 255));
+        scheduledFlightsTable.setForeground(new java.awt.Color(0, 0, 0));
+        scheduledFlightsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -851,127 +888,126 @@ public class AdminFrame extends javax.swing.JFrame {
                 "Airline", "Flight Code", "Origin", "Destination", "Date", "Departure Time"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        scheduledFlightsScrollPane.setViewportView(scheduledFlightsTable);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 580, 510));
+        scheduledFlightsPanel.add(scheduledFlightsScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 580, 510));
 
-        addOfferButton3.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton3.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton3.setText("Delete Selected");
-        addOfferButton3.setBorder(null);
-        addOfferButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton3.addActionListener(new java.awt.event.ActionListener() {
+        deleteSelectedButton.setBackground(new java.awt.Color(255, 255, 255));
+        deleteSelectedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        deleteSelectedButton.setForeground(new java.awt.Color(5, 20, 42));
+        deleteSelectedButton.setText("Delete Selected");
+        deleteSelectedButton.setBorder(null);
+        deleteSelectedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        deleteSelectedButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        deleteSelectedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton3ActionPerformed(evt);
+                deleteSelectedButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(addOfferButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 550, 130, 30));
+        scheduledFlightsPanel.add(deleteSelectedButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 550, 130, 30));
 
-        addOfferButton1.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton1.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton1.setText("Edit Selected");
-        addOfferButton1.setBorder(null);
-        addOfferButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton1.addActionListener(new java.awt.event.ActionListener() {
+        editSelectedButton.setBackground(new java.awt.Color(255, 255, 255));
+        editSelectedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        editSelectedButton.setForeground(new java.awt.Color(5, 20, 42));
+        editSelectedButton.setText("Edit Selected");
+        editSelectedButton.setBorder(null);
+        editSelectedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        editSelectedButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        editSelectedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton1ActionPerformed(evt);
+                editSelectedButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(addOfferButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 550, 130, 30));
+        scheduledFlightsPanel.add(editSelectedButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 550, 130, 30));
 
-        manageSchedulePanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 600, 590));
+        manageSchedulePanel.add(scheduledFlightsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 600, 590));
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Add Flight Schedule", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        addFlightSchedulePanel.setBackground(new java.awt.Color(204, 204, 204));
+        addFlightSchedulePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Add Flight Schedule", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
+        addFlightSchedulePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        seatTypeLabel1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        seatTypeLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel1.setText("Time");
-        jPanel2.add(seatTypeLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+        timeScheduleLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        timeScheduleLabel.setForeground(new java.awt.Color(0, 0, 0));
+        timeScheduleLabel.setText("Time");
+        addFlightSchedulePanel.add(timeScheduleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
-        seatTypeLabel2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        seatTypeLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel2.setText("Airline:");
-        jPanel2.add(seatTypeLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        airlineLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        airlineLabel.setForeground(new java.awt.Color(0, 0, 0));
+        airlineLabel.setText("Airline:");
+        addFlightSchedulePanel.add(airlineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
-        seatTypeLabel3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        seatTypeLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel3.setText("Flight Code:");
-        jPanel2.add(seatTypeLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        flightCodeScheduleLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        flightCodeScheduleLabel.setForeground(new java.awt.Color(0, 0, 0));
+        flightCodeScheduleLabel.setText("Flight Code:");
+        addFlightSchedulePanel.add(flightCodeScheduleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        seatTypeLabel4.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        seatTypeLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel4.setText("Origin:");
-        jPanel2.add(seatTypeLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        originScheduleLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        originScheduleLabel.setForeground(new java.awt.Color(0, 0, 0));
+        originScheduleLabel.setText("Origin:");
+        addFlightSchedulePanel.add(originScheduleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        seatTypeLabel5.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        seatTypeLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel5.setText("Destination:");
-        jPanel2.add(seatTypeLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        destinationScheduleLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        destinationScheduleLabel.setForeground(new java.awt.Color(0, 0, 0));
+        destinationScheduleLabel.setText("Destination:");
+        addFlightSchedulePanel.add(destinationScheduleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
-        foodAndBeverages2.setBackground(new java.awt.Color(255, 255, 255));
-        foodAndBeverages2.setForeground(new java.awt.Color(0, 0, 0));
-        foodAndBeverages2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(foodAndBeverages2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 160, 30));
+        airline.setBackground(new java.awt.Color(255, 255, 255));
+        airline.setForeground(new java.awt.Color(0, 0, 0));
+        airline.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        addFlightSchedulePanel.add(airline, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 160, 30));
 
-        foodAndBeverages3.setBackground(new java.awt.Color(255, 255, 255));
-        foodAndBeverages3.setForeground(new java.awt.Color(0, 0, 0));
-        foodAndBeverages3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(foodAndBeverages3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 160, 30));
+        originSchedule.setBackground(new java.awt.Color(255, 255, 255));
+        originSchedule.setForeground(new java.awt.Color(0, 0, 0));
+        originSchedule.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        addFlightSchedulePanel.add(originSchedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 160, 30));
 
-        foodAndBeverages4.setBackground(new java.awt.Color(255, 255, 255));
-        foodAndBeverages4.setForeground(new java.awt.Color(0, 0, 0));
-        foodAndBeverages4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(foodAndBeverages4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 160, 30));
+        detailsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        detailsLabel.setForeground(new java.awt.Color(0, 0, 0));
+        detailsLabel.setText("Details");
+        addFlightSchedulePanel.add(detailsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
 
-        seatTypeLabel6.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        seatTypeLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel6.setText("Details");
-        jPanel2.add(seatTypeLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
+        departureLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        departureLabel.setForeground(new java.awt.Color(0, 0, 0));
+        departureLabel.setText("Departure");
+        addFlightSchedulePanel.add(departureLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
 
-        seatTypeLabel7.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        seatTypeLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel7.setText("Departure");
-        jPanel2.add(seatTypeLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
+        dateScheduleLabel.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        dateScheduleLabel.setForeground(new java.awt.Color(0, 0, 0));
+        dateScheduleLabel.setText("Date ");
+        addFlightSchedulePanel.add(dateScheduleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
-        seatTypeLabel8.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        seatTypeLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel8.setText("Date ");
-        jPanel2.add(seatTypeLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
+        destinationSchedule.setBackground(new java.awt.Color(255, 255, 255));
+        destinationSchedule.setForeground(new java.awt.Color(0, 0, 0));
+        destinationSchedule.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        addFlightSchedulePanel.add(destinationSchedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 160, 30));
 
-        foodAndBeverages5.setBackground(new java.awt.Color(255, 255, 255));
-        foodAndBeverages5.setForeground(new java.awt.Color(0, 0, 0));
-        foodAndBeverages5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(foodAndBeverages5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 160, 30));
+        dateChooserSchedule.setBackground(new java.awt.Color(255, 255, 255));
+        dateChooserSchedule.setForeground(new java.awt.Color(255, 255, 255));
+        addFlightSchedulePanel.add(dateChooserSchedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 160, 30));
 
-        jDateChooser1.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 160, 30));
+        hourTimeSchedule.setToolTipText("");
+        addFlightSchedulePanel.add(hourTimeSchedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 70, -1));
+        addFlightSchedulePanel.add(minuteScheduleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 70, -1));
 
-        jSpinner1.setToolTipText("");
-        jPanel2.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 70, -1));
-        jPanel2.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 70, -1));
-
-        addOfferButton2.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton2.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton2.setText("Add Schedule");
-        addOfferButton2.setBorder(null);
-        addOfferButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton2.addActionListener(new java.awt.event.ActionListener() {
+        addScheduleButton.setBackground(new java.awt.Color(255, 255, 255));
+        addScheduleButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        addScheduleButton.setForeground(new java.awt.Color(5, 20, 42));
+        addScheduleButton.setText("Add Schedule");
+        addScheduleButton.setBorder(null);
+        addScheduleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        addScheduleButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        addScheduleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton2ActionPerformed(evt);
+                addScheduleButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(addOfferButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 140, 30));
+        addFlightSchedulePanel.add(addScheduleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 140, 30));
 
-        manageSchedulePanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, 300, 450));
+        flightCodeSchedule.setBackground(new java.awt.Color(255, 255, 255));
+        flightCodeSchedule.setForeground(new java.awt.Color(0, 0, 0));
+        addFlightSchedulePanel.add(flightCodeSchedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 160, 30));
+
+        manageSchedulePanel.add(addFlightSchedulePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, 300, 450));
 
         tabPanel.addTab("tab3", manageSchedulePanel);
 
@@ -997,23 +1033,23 @@ public class AdminFrame extends javax.swing.JFrame {
         bookingsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bookings", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
         bookingsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        addOfferButton4.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton4.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton4.setText("View Selected");
-        addOfferButton4.setBorder(null);
-        addOfferButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton4.addActionListener(new java.awt.event.ActionListener() {
+        viewSelectedButton.setBackground(new java.awt.Color(255, 255, 255));
+        viewSelectedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        viewSelectedButton.setForeground(new java.awt.Color(5, 20, 42));
+        viewSelectedButton.setText("View Selected");
+        viewSelectedButton.setBorder(null);
+        viewSelectedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        viewSelectedButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        viewSelectedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton4ActionPerformed(evt);
+                viewSelectedButtonActionPerformed(evt);
             }
         });
-        bookingsPanel.add(addOfferButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 610, 140, 30));
+        bookingsPanel.add(viewSelectedButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 610, 140, 30));
 
-        jTable3.setBackground(new java.awt.Color(255, 255, 255));
-        jTable3.setForeground(new java.awt.Color(0, 0, 0));
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        manageBookingsTable.setBackground(new java.awt.Color(255, 255, 255));
+        manageBookingsTable.setForeground(new java.awt.Color(0, 0, 0));
+        manageBookingsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -1024,51 +1060,51 @@ public class AdminFrame extends javax.swing.JFrame {
                 "Booking ID", "Name", "Route", "Category", "Flight Date", "Payment", "No. of Passenger"
             }
         ));
-        jScrollPane4.setViewportView(jTable3);
+        manageBookingsScrollPane.setViewportView(manageBookingsTable);
 
-        bookingsPanel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 890, 570));
+        bookingsPanel.add(manageBookingsScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 890, 570));
 
-        addOfferButton5.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton5.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton5.setText("Approved History");
-        addOfferButton5.setBorder(null);
-        addOfferButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton5.addActionListener(new java.awt.event.ActionListener() {
+        approveHistoryButton.setBackground(new java.awt.Color(255, 255, 255));
+        approveHistoryButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        approveHistoryButton.setForeground(new java.awt.Color(5, 20, 42));
+        approveHistoryButton.setText("Approved History");
+        approveHistoryButton.setBorder(null);
+        approveHistoryButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        approveHistoryButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        approveHistoryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton5ActionPerformed(evt);
+                approveHistoryButtonActionPerformed(evt);
             }
         });
-        bookingsPanel.add(addOfferButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 610, 140, 30));
+        bookingsPanel.add(approveHistoryButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 610, 140, 30));
 
-        addOfferButton6.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton6.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton6.setText("Cancel Selected");
-        addOfferButton6.setBorder(null);
-        addOfferButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton6.addActionListener(new java.awt.event.ActionListener() {
+        cancelSelectedButton.setBackground(new java.awt.Color(255, 255, 255));
+        cancelSelectedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cancelSelectedButton.setForeground(new java.awt.Color(5, 20, 42));
+        cancelSelectedButton.setText("Cancel Selected");
+        cancelSelectedButton.setBorder(null);
+        cancelSelectedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cancelSelectedButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        cancelSelectedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton6ActionPerformed(evt);
+                cancelSelectedButtonActionPerformed(evt);
             }
         });
-        bookingsPanel.add(addOfferButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 610, 140, 30));
+        bookingsPanel.add(cancelSelectedButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 610, 140, 30));
 
-        addOfferButton7.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton7.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton7.setText("Approve Selected");
-        addOfferButton7.setBorder(null);
-        addOfferButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton7.addActionListener(new java.awt.event.ActionListener() {
+        approveSelectedButton.setBackground(new java.awt.Color(255, 255, 255));
+        approveSelectedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        approveSelectedButton.setForeground(new java.awt.Color(5, 20, 42));
+        approveSelectedButton.setText("Approve Selected");
+        approveSelectedButton.setBorder(null);
+        approveSelectedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        approveSelectedButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        approveSelectedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton7ActionPerformed(evt);
+                approveSelectedButtonActionPerformed(evt);
             }
         });
-        bookingsPanel.add(addOfferButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 610, 140, 30));
+        bookingsPanel.add(approveSelectedButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 610, 140, 30));
 
         bookingsMainPanel.add(bookingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 910, 650));
 
@@ -1077,14 +1113,14 @@ public class AdminFrame extends javax.swing.JFrame {
         approvedBookingsHistory.setBackground(new java.awt.Color(204, 204, 204));
         approvedBookingsHistory.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        recentFlightsLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        recentFlightsLabel1.setForeground(new java.awt.Color(60, 63, 65));
-        recentFlightsLabel1.setText("Approved Bookings History");
-        approvedBookingsHistory.add(recentFlightsLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, 40));
+        approveBookingsHistoryLabel.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        approveBookingsHistoryLabel.setForeground(new java.awt.Color(60, 63, 65));
+        approveBookingsHistoryLabel.setText("Approved Bookings History");
+        approvedBookingsHistory.add(approveBookingsHistoryLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, 40));
 
-        jTable4.setBackground(new java.awt.Color(255, 255, 255));
-        jTable4.setForeground(new java.awt.Color(0, 0, 0));
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        approvedBookingsTable.setBackground(new java.awt.Color(255, 255, 255));
+        approvedBookingsTable.setForeground(new java.awt.Color(0, 0, 0));
+        approvedBookingsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -1095,175 +1131,175 @@ public class AdminFrame extends javax.swing.JFrame {
                 "Booking ID", "Name", "Route", "Category", "Flight Date", "Payment", "No. of Passenger"
             }
         ));
-        jScrollPane5.setViewportView(jTable4);
+        approvedBookingsScrollPane.setViewportView(approvedBookingsTable);
 
-        approvedBookingsHistory.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 890, 620));
+        approvedBookingsHistory.add(approvedBookingsScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 890, 620));
 
-        addOfferButton8.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton8.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton8.setText("Back To Bookings");
-        addOfferButton8.setBorder(null);
-        addOfferButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton8.addActionListener(new java.awt.event.ActionListener() {
+        backToBookingsButton.setBackground(new java.awt.Color(255, 255, 255));
+        backToBookingsButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        backToBookingsButton.setForeground(new java.awt.Color(5, 20, 42));
+        backToBookingsButton.setText("Back To Bookings");
+        backToBookingsButton.setBorder(null);
+        backToBookingsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        backToBookingsButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        backToBookingsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton8ActionPerformed(evt);
+                backToBookingsButtonActionPerformed(evt);
             }
         });
-        approvedBookingsHistory.add(addOfferButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 690, 390, 40));
+        approvedBookingsHistory.add(backToBookingsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 690, 390, 40));
 
         manageBookingsPanel.add(approvedBookingsHistory, "card3");
 
         personalBookingDetails.setBackground(new java.awt.Color(204, 204, 204));
         personalBookingDetails.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        profilePhotoPanel.setBackground(new java.awt.Color(153, 153, 153));
+        profilePhotoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        profilePhotoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Profile Icon Big.png")); // NOI18N
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 110, 120));
+        profilePhotoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Profile Icon Big.png")); // NOI18N
+        profilePhotoPanel.add(profilePhotoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 110, 120));
 
-        personalBookingDetails.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 120, 120));
+        personalBookingDetails.add(profilePhotoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 120, 120));
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Personal and Booking Details", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        userDetailsPanel.setBackground(new java.awt.Color(204, 204, 204));
+        userDetailsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Personal and Booking Details", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
+        userDetailsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        seatTypeLabel9.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel9.setText("FLIGHT DATE:");
-        jPanel4.add(seatTypeLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, -1, -1));
+        flightDateLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        flightDateLabel.setForeground(new java.awt.Color(0, 0, 0));
+        flightDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        flightDateLabel.setText("FLIGHT DATE:");
+        userDetailsPanel.add(flightDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, -1, -1));
 
-        seatTypeLabel10.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel10.setText("No special requests");
-        jPanel4.add(seatTypeLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, -1, -1));
+        userRequest.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        userRequest.setForeground(new java.awt.Color(0, 0, 0));
+        userRequest.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        userRequest.setText("No special requests");
+        userDetailsPanel.add(userRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, -1, -1));
 
-        seatTypeLabel11.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel11.setText("ROUTE:");
-        jPanel4.add(seatTypeLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
+        routeLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        routeLabel.setForeground(new java.awt.Color(0, 0, 0));
+        routeLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        routeLabel.setText("ROUTE:");
+        userDetailsPanel.add(routeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
 
-        seatTypeLabel12.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel12.setText("CATEGORY:");
-        jPanel4.add(seatTypeLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, -1));
+        categoryLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        categoryLabel.setForeground(new java.awt.Color(0, 0, 0));
+        categoryLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        categoryLabel.setText("CATEGORY:");
+        userDetailsPanel.add(categoryLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, -1));
 
-        seatTypeLabel13.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel13.setText("OTHER INFO:");
-        jPanel4.add(seatTypeLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, -1, 20));
+        otherInfoLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        otherInfoLabel.setForeground(new java.awt.Color(0, 0, 0));
+        otherInfoLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        otherInfoLabel.setText("OTHER INFO:");
+        userDetailsPanel.add(otherInfoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, -1, 20));
 
-        seatTypeLabel14.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel14.setText("PAYNENT:");
-        jPanel4.add(seatTypeLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 90, 20));
+        paymentLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        paymentLabel.setForeground(new java.awt.Color(0, 0, 0));
+        paymentLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        paymentLabel.setText("PAYMENT:");
+        userDetailsPanel.add(paymentLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 90, 20));
 
-        seatTypeLabel15.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel15.setText("NO. OF PASSENGER:");
-        jPanel4.add(seatTypeLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, -1, 20));
+        noOfPassengerLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        noOfPassengerLabel.setForeground(new java.awt.Color(0, 0, 0));
+        noOfPassengerLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        noOfPassengerLabel.setText("NO. OF PASSENGER:");
+        userDetailsPanel.add(noOfPassengerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, -1, 20));
 
-        seatTypeLabel16.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel16.setText("PASSENGERS BOOKED:");
-        jPanel4.add(seatTypeLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, 20));
+        passengersBookedLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        passengersBookedLabel.setForeground(new java.awt.Color(0, 0, 0));
+        passengersBookedLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        passengersBookedLabel.setText("PASSENGERS BOOKED:");
+        userDetailsPanel.add(passengersBookedLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, 20));
 
-        seatTypeLabel17.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel17.setText("SEATS:");
-        jPanel4.add(seatTypeLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, -1, 20));
+        seatsLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        seatsLabel.setForeground(new java.awt.Color(0, 0, 0));
+        seatsLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        seatsLabel.setText("SEATS:");
+        userDetailsPanel.add(seatsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, -1, 20));
 
-        seatTypeLabel18.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        seatTypeLabel18.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        seatTypeLabel18.setText("ADDRESS:");
-        jPanel4.add(seatTypeLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, -1, -1));
+        userAddressLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        userAddressLabel.setForeground(new java.awt.Color(0, 0, 0));
+        userAddressLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        userAddressLabel.setText("ADDRESS:");
+        userDetailsPanel.add(userAddressLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, -1, -1));
 
-        seatTypeLabel19.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel19.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel19.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel19.setText("Address, City, Country");
-        jPanel4.add(seatTypeLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
+        userAddress.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        userAddress.setForeground(new java.awt.Color(0, 0, 0));
+        userAddress.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        userAddress.setText("Address, City, Country");
+        userDetailsPanel.add(userAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
 
-        seatTypeLabel20.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel20.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel20.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel20.setText("MNL - CRK");
-        jPanel4.add(seatTypeLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, -1, -1));
+        route.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        route.setForeground(new java.awt.Color(0, 0, 0));
+        route.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        route.setText("MNL - CRK");
+        userDetailsPanel.add(route, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, -1, -1));
 
-        seatTypeLabel21.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel21.setText("One Way");
-        jPanel4.add(seatTypeLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
+        category.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        category.setForeground(new java.awt.Color(0, 0, 0));
+        category.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        category.setText("One Way");
+        userDetailsPanel.add(category, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
 
-        seatTypeLabel22.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel22.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel22.setText("2025-12-25");
-        jPanel4.add(seatTypeLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
+        flightDate.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        flightDate.setForeground(new java.awt.Color(0, 0, 0));
+        flightDate.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        flightDate.setText("2025-12-25");
+        userDetailsPanel.add(flightDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
 
-        seatTypeLabel23.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel23.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel23.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel23.setText("Online");
-        jPanel4.add(seatTypeLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, -1, -1));
+        paymentMode.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        paymentMode.setForeground(new java.awt.Color(0, 0, 0));
+        paymentMode.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        paymentMode.setText("Online");
+        userDetailsPanel.add(paymentMode, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, -1, -1));
 
-        seatTypeLabel24.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel24.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel24.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel24.setText("3");
-        jPanel4.add(seatTypeLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, -1, -1));
+        noOfPassenger.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        noOfPassenger.setForeground(new java.awt.Color(0, 0, 0));
+        noOfPassenger.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        noOfPassenger.setText("3");
+        userDetailsPanel.add(noOfPassenger, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, -1, -1));
 
-        seatTypeLabel25.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel25.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel25.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel25.setText("Passenger1, Passenger2");
-        jPanel4.add(seatTypeLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
+        passengersName.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        passengersName.setForeground(new java.awt.Color(0, 0, 0));
+        passengersName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        passengersName.setText("Passenger1, Passenger2");
+        userDetailsPanel.add(passengersName, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
 
-        seatTypeLabel26.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        seatTypeLabel26.setForeground(new java.awt.Color(0, 0, 0));
-        seatTypeLabel26.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seatTypeLabel26.setText("A1, A2, A3");
-        jPanel4.add(seatTypeLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, -1, -1));
+        seats.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        seats.setForeground(new java.awt.Color(0, 0, 0));
+        seats.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        seats.setText("A1, A2, A3");
+        userDetailsPanel.add(seats, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, -1, -1));
 
-        personalBookingDetails.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 910, 520));
+        personalBookingDetails.add(userDetailsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 910, 520));
 
-        selectedAirlineLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        selectedAirlineLabel1.setForeground(new java.awt.Color(60, 63, 65));
-        selectedAirlineLabel1.setText("Booking ID: BK003");
-        personalBookingDetails.add(selectedAirlineLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 240, 30));
+        bookingID.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        bookingID.setForeground(new java.awt.Color(60, 63, 65));
+        bookingID.setText("Booking ID: BK003");
+        personalBookingDetails.add(bookingID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 240, 30));
 
-        selectedAirlineLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        selectedAirlineLabel2.setForeground(new java.awt.Color(60, 63, 65));
-        selectedAirlineLabel2.setText("John Doe");
-        personalBookingDetails.add(selectedAirlineLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 240, 30));
+        userName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        userName.setForeground(new java.awt.Color(60, 63, 65));
+        userName.setText("John Doe");
+        personalBookingDetails.add(userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 240, 30));
 
-        addOfferButton9.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton9.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton9.setText("Back To Bookings");
-        addOfferButton9.setBorder(null);
-        addOfferButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton9.addActionListener(new java.awt.event.ActionListener() {
+        backToButton.setBackground(new java.awt.Color(255, 255, 255));
+        backToButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        backToButton.setForeground(new java.awt.Color(5, 20, 42));
+        backToButton.setText("Back To Bookings");
+        backToButton.setBorder(null);
+        backToButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        backToButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        backToButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton9ActionPerformed(evt);
+                backToButtonActionPerformed(evt);
             }
         });
-        personalBookingDetails.add(addOfferButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 690, 390, 40));
+        personalBookingDetails.add(backToButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 690, 390, 40));
 
         manageBookingsPanel.add(personalBookingDetails, "card4");
 
@@ -1284,357 +1320,13 @@ public class AdminFrame extends javax.swing.JFrame {
 
         manageSeatsPanel.add(manageSeatsHeaderPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 910, 70));
 
-        jPanel9.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel10.setLayout(new java.awt.GridLayout(20, 2, 3, 3));
-
-        jButton6.setBackground(new java.awt.Color(51, 255, 51));
-        jButton6.setText("jButton6");
-        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton6);
-
-        jButton7.setBackground(new java.awt.Color(51, 255, 51));
-        jButton7.setText("jButton7");
-        jButton7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton7);
-
-        jButton8.setBackground(new java.awt.Color(51, 255, 51));
-        jButton8.setText("jButton8");
-        jButton8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton8);
-
-        jButton9.setBackground(new java.awt.Color(51, 255, 51));
-        jButton9.setText("jButton9");
-        jButton9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        jPanel10.add(jButton9);
-
-        jButton10.setBackground(new java.awt.Color(51, 255, 51));
-        jButton10.setText("jButton10");
-        jButton10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton10);
-
-        jButton11.setBackground(new java.awt.Color(51, 255, 51));
-        jButton11.setText("jButton11");
-        jButton11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton11);
-
-        jButton12.setBackground(new java.awt.Color(51, 255, 51));
-        jButton12.setText("jButton12");
-        jButton12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton12);
-
-        jButton13.setBackground(new java.awt.Color(51, 255, 51));
-        jButton13.setText("jButton13");
-        jButton13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton13);
-
-        jButton14.setBackground(new java.awt.Color(51, 255, 51));
-        jButton14.setText("jButton7");
-        jButton14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton14);
-
-        jButton15.setBackground(new java.awt.Color(51, 255, 51));
-        jButton15.setText("jButton8");
-        jButton15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton15);
-
-        jButton16.setBackground(new java.awt.Color(51, 255, 51));
-        jButton16.setText("jButton9");
-        jButton16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton16);
-
-        jButton17.setBackground(new java.awt.Color(51, 255, 51));
-        jButton17.setText("jButton10");
-        jButton17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton17);
-
-        jButton18.setBackground(new java.awt.Color(51, 255, 51));
-        jButton18.setText("jButton11");
-        jButton18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton18);
-
-        jButton19.setBackground(new java.awt.Color(51, 255, 51));
-        jButton19.setText("jButton12");
-        jButton19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton19);
-
-        jButton20.setBackground(new java.awt.Color(51, 255, 51));
-        jButton20.setText("jButton13");
-        jButton20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton20);
-
-        jButton21.setBackground(new java.awt.Color(51, 255, 51));
-        jButton21.setText("jButton7");
-        jButton21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton21);
-
-        jButton22.setBackground(new java.awt.Color(51, 255, 51));
-        jButton22.setText("jButton8");
-        jButton22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton22);
-
-        jButton23.setBackground(new java.awt.Color(51, 255, 51));
-        jButton23.setText("jButton9");
-        jButton23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton23);
-
-        jButton24.setBackground(new java.awt.Color(51, 255, 51));
-        jButton24.setText("jButton10");
-        jButton24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton24);
-
-        jButton25.setBackground(new java.awt.Color(51, 255, 51));
-        jButton25.setText("jButton11");
-        jButton25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton25);
-
-        jButton26.setBackground(new java.awt.Color(51, 255, 51));
-        jButton26.setText("jButton12");
-        jButton26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton26);
-
-        jButton27.setBackground(new java.awt.Color(51, 255, 51));
-        jButton27.setText("jButton13");
-        jButton27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton27);
-
-        jButton28.setBackground(new java.awt.Color(51, 255, 51));
-        jButton28.setText("jButton7");
-        jButton28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton28);
-
-        jButton29.setBackground(new java.awt.Color(51, 255, 51));
-        jButton29.setText("jButton8");
-        jButton29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton29);
-
-        jButton30.setBackground(new java.awt.Color(51, 255, 51));
-        jButton30.setText("jButton9");
-        jButton30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton30);
-
-        jButton31.setBackground(new java.awt.Color(51, 255, 51));
-        jButton31.setText("jButton10");
-        jButton31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton31);
-
-        jButton32.setBackground(new java.awt.Color(51, 255, 51));
-        jButton32.setText("jButton11");
-        jButton32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton32);
-
-        jButton33.setBackground(new java.awt.Color(51, 255, 51));
-        jButton33.setText("jButton12");
-        jButton33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton33);
-
-        jButton34.setBackground(new java.awt.Color(51, 255, 51));
-        jButton34.setText("jButton13");
-        jButton34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton34);
-
-        jButton35.setBackground(new java.awt.Color(51, 255, 51));
-        jButton35.setText("jButton7");
-        jButton35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton35);
-
-        jButton36.setBackground(new java.awt.Color(51, 255, 51));
-        jButton36.setText("jButton8");
-        jButton36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton36);
-
-        jButton37.setBackground(new java.awt.Color(51, 255, 51));
-        jButton37.setText("jButton9");
-        jButton37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton37);
-
-        jButton38.setBackground(new java.awt.Color(51, 255, 51));
-        jButton38.setText("jButton10");
-        jButton38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton38);
-
-        jButton39.setBackground(new java.awt.Color(51, 255, 51));
-        jButton39.setText("jButton11");
-        jButton39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton39);
-
-        jButton40.setBackground(new java.awt.Color(51, 255, 51));
-        jButton40.setText("jButton12");
-        jButton40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton40);
-
-        jButton41.setBackground(new java.awt.Color(51, 255, 51));
-        jButton41.setText("jButton13");
-        jButton41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton41);
-
-        jButton42.setBackground(new java.awt.Color(51, 255, 51));
-        jButton42.setText("jButton42");
-        jButton42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton42);
-
-        jButton43.setBackground(new java.awt.Color(51, 255, 51));
-        jButton43.setText("jButton43");
-        jButton43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton43);
-
-        jButton44.setBackground(new java.awt.Color(51, 255, 51));
-        jButton44.setText("jButton44");
-        jButton44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton44);
-
-        jButton45.setBackground(new java.awt.Color(51, 255, 51));
-        jButton45.setText("jButton45");
-        jButton45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel10.add(jButton45);
-
-        jPanel9.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 140, 610));
-
-        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel11.setLayout(new java.awt.GridLayout(20, 2, 2, 0));
-
-        jButton46.setText("jButton6");
-        jPanel11.add(jButton46);
-
-        jButton47.setText("jButton7");
-        jPanel11.add(jButton47);
-
-        jButton48.setText("jButton8");
-        jPanel11.add(jButton48);
-
-        jButton49.setText("jButton9");
-        jPanel11.add(jButton49);
-
-        jButton50.setText("jButton10");
-        jPanel11.add(jButton50);
-
-        jButton51.setText("jButton11");
-        jPanel11.add(jButton51);
-
-        jButton52.setText("jButton12");
-        jPanel11.add(jButton52);
-
-        jButton53.setText("jButton13");
-        jPanel11.add(jButton53);
-
-        jButton54.setText("jButton7");
-        jPanel11.add(jButton54);
-
-        jButton55.setText("jButton8");
-        jPanel11.add(jButton55);
-
-        jButton56.setText("jButton9");
-        jPanel11.add(jButton56);
-
-        jButton57.setText("jButton10");
-        jPanel11.add(jButton57);
-
-        jButton58.setText("jButton11");
-        jPanel11.add(jButton58);
-
-        jButton59.setText("jButton12");
-        jPanel11.add(jButton59);
-
-        jButton60.setText("jButton13");
-        jPanel11.add(jButton60);
-
-        jButton61.setText("jButton7");
-        jPanel11.add(jButton61);
-
-        jButton62.setText("jButton8");
-        jPanel11.add(jButton62);
-
-        jButton63.setText("jButton9");
-        jPanel11.add(jButton63);
-
-        jButton64.setText("jButton10");
-        jPanel11.add(jButton64);
-
-        jButton65.setText("jButton11");
-        jPanel11.add(jButton65);
-
-        jButton66.setText("jButton12");
-        jPanel11.add(jButton66);
-
-        jButton67.setText("jButton13");
-        jPanel11.add(jButton67);
-
-        jButton68.setText("jButton7");
-        jPanel11.add(jButton68);
-
-        jButton69.setText("jButton8");
-        jPanel11.add(jButton69);
-
-        jButton70.setText("jButton9");
-        jPanel11.add(jButton70);
-
-        jButton71.setText("jButton10");
-        jPanel11.add(jButton71);
-
-        jButton72.setText("jButton11");
-        jPanel11.add(jButton72);
-
-        jButton73.setText("jButton12");
-        jPanel11.add(jButton73);
-
-        jButton74.setText("jButton13");
-        jPanel11.add(jButton74);
-
-        jButton75.setText("jButton7");
-        jPanel11.add(jButton75);
-
-        jButton76.setText("jButton8");
-        jPanel11.add(jButton76);
-
-        jButton77.setText("jButton9");
-        jPanel11.add(jButton77);
-
-        jButton78.setText("jButton10");
-        jPanel11.add(jButton78);
-
-        jButton79.setText("jButton11");
-        jPanel11.add(jButton79);
-
-        jButton80.setText("jButton12");
-        jPanel11.add(jButton80);
-
-        jButton81.setText("jButton13");
-        jPanel11.add(jButton81);
-
-        jButton82.setText("jButton42");
-        jPanel11.add(jButton82);
-
-        jButton83.setText("jButton43");
-        jPanel11.add(jButton83);
-
-        jButton84.setText("jButton44");
-        jPanel11.add(jButton84);
-
-        jButton85.setText("jButton45");
-        jPanel11.add(jButton85);
-
-        jPanel9.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 140, 610));
-
-        jScrollPane8.setViewportView(jPanel9);
-
-        manageSeatsPanel.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 330, 620));
-
-        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Manage Seats", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTable5.setBackground(new java.awt.Color(255, 255, 255));
-        jTable5.setForeground(new java.awt.Color(0, 0, 0));
-        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+        manageSeats.setBackground(new java.awt.Color(204, 204, 204));
+        manageSeats.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Manage Seats", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
+        manageSeats.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        seatsTable.setBackground(new java.awt.Color(255, 255, 255));
+        seatsTable.setForeground(new java.awt.Color(0, 0, 0));
+        seatsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -1645,60 +1337,571 @@ public class AdminFrame extends javax.swing.JFrame {
                 "Airline", "Flight Code", "Origin", "Destination", "Date", "Departure Time"
             }
         ));
-        jScrollPane6.setViewportView(jTable5);
+        manageSeatsScrollPane.setViewportView(seatsTable);
 
-        jPanel5.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 550, 370));
+        manageSeats.add(manageSeatsScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 550, 410));
 
-        addOfferButton10.setBackground(new java.awt.Color(255, 255, 255));
-        addOfferButton10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addOfferButton10.setForeground(new java.awt.Color(5, 20, 42));
-        addOfferButton10.setText("View Selected");
-        addOfferButton10.setBorder(null);
-        addOfferButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addOfferButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        addOfferButton10.addActionListener(new java.awt.event.ActionListener() {
+        viewSelectedButtonSeats.setBackground(new java.awt.Color(255, 255, 255));
+        viewSelectedButtonSeats.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        viewSelectedButtonSeats.setForeground(new java.awt.Color(5, 20, 42));
+        viewSelectedButtonSeats.setText("View Selected");
+        viewSelectedButtonSeats.setBorder(null);
+        viewSelectedButtonSeats.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        viewSelectedButtonSeats.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        viewSelectedButtonSeats.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOfferButton10ActionPerformed(evt);
+                viewSelectedButtonSeatsActionPerformed(evt);
             }
         });
-        jPanel5.add(addOfferButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 580, 130, 30));
+        manageSeats.add(viewSelectedButtonSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 580, 130, 30));
 
-        destinationLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        destinationLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        destinationLabel1.setText("Date");
-        jPanel5.add(destinationLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, 20));
+        dateLabelSeats.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        dateLabelSeats.setForeground(new java.awt.Color(0, 0, 0));
+        dateLabelSeats.setText("Date");
+        manageSeats.add(dateLabelSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, 20));
 
-        flightCode1.setBackground(new java.awt.Color(255, 255, 255));
-        flightCode1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel5.add(flightCode1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 200, 40));
+        scheduleID.setBackground(new java.awt.Color(255, 255, 255));
+        scheduleID.setForeground(new java.awt.Color(0, 0, 0));
+        manageSeats.add(scheduleID, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 200, 30));
 
-        destinationLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        destinationLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        destinationLabel2.setText("Search Schedule ID:");
-        jPanel5.add(destinationLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, 40));
+        searchScheduleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        searchScheduleLabel.setForeground(new java.awt.Color(0, 0, 0));
+        searchScheduleLabel.setText("Search Schedule ID:");
+        manageSeats.add(searchScheduleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, -1, 30));
 
-        destinationLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        destinationLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        destinationLabel3.setText("Origin");
-        jPanel5.add(destinationLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, 20));
-        jPanel5.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 150, 40));
+        originLabelSeats.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        originLabelSeats.setForeground(new java.awt.Color(0, 0, 0));
+        originLabelSeats.setText("Origin");
+        manageSeats.add(originLabelSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, 20));
+        manageSeats.add(seatsDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 150, 30));
 
-        destinationLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        destinationLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        destinationLabel4.setText("Destination");
-        jPanel5.add(destinationLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, 20));
+        destinationLabelSeats.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        destinationLabelSeats.setForeground(new java.awt.Color(0, 0, 0));
+        destinationLabelSeats.setText("Destination");
+        manageSeats.add(destinationLabelSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, 20));
 
-        foodAndBeverages6.setBackground(new java.awt.Color(255, 255, 255));
-        foodAndBeverages6.setForeground(new java.awt.Color(0, 0, 0));
-        foodAndBeverages6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel5.add(foodAndBeverages6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 170, 40));
+        destinationComboBox.setBackground(new java.awt.Color(255, 255, 255));
+        destinationComboBox.setForeground(new java.awt.Color(0, 0, 0));
+        destinationComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        manageSeats.add(destinationComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 170, 30));
 
-        foodAndBeverages7.setBackground(new java.awt.Color(255, 255, 255));
-        foodAndBeverages7.setForeground(new java.awt.Color(0, 0, 0));
-        foodAndBeverages7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel5.add(foodAndBeverages7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 170, 40));
+        originComboBox.setBackground(new java.awt.Color(255, 255, 255));
+        originComboBox.setForeground(new java.awt.Color(0, 0, 0));
+        originComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        manageSeats.add(originComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 170, 30));
 
-        manageSeatsPanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 570, 620));
+        manageSeatsPanel.add(manageSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 570, 620));
+
+        seatsPanell.setBackground(new java.awt.Color(204, 204, 204));
+        seatsPanell.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        abSectionSeats.setBackground(new java.awt.Color(255, 255, 255));
+        abSectionSeats.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        abSectionSeats.setForeground(new java.awt.Color(0, 0, 0));
+        abSectionSeats.setLayout(new java.awt.GridLayout(20, 2, 3, 3));
+
+        jButton6.setBackground(new java.awt.Color(51, 255, 51));
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
+        jButton6.setText("C1");
+        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton6);
+
+        B1.setBackground(new java.awt.Color(51, 255, 51));
+        B1.setForeground(new java.awt.Color(0, 0, 0));
+        B1.setText("D1");
+        B1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(B1);
+
+        jButton8.setBackground(new java.awt.Color(51, 255, 51));
+        jButton8.setForeground(new java.awt.Color(0, 0, 0));
+        jButton8.setText("C2");
+        jButton8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton8);
+
+        jButton9.setBackground(new java.awt.Color(51, 255, 51));
+        jButton9.setForeground(new java.awt.Color(0, 0, 0));
+        jButton9.setText("D2");
+        jButton9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        abSectionSeats.add(jButton9);
+
+        jButton10.setBackground(new java.awt.Color(51, 255, 51));
+        jButton10.setForeground(new java.awt.Color(0, 0, 0));
+        jButton10.setText("C3");
+        jButton10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton10);
+
+        jButton11.setBackground(new java.awt.Color(51, 255, 51));
+        jButton11.setForeground(new java.awt.Color(0, 0, 0));
+        jButton11.setText("D3");
+        jButton11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton11);
+
+        jButton12.setBackground(new java.awt.Color(51, 255, 51));
+        jButton12.setForeground(new java.awt.Color(0, 0, 0));
+        jButton12.setText("C4");
+        jButton12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton12);
+
+        B4.setBackground(new java.awt.Color(51, 255, 51));
+        B4.setForeground(new java.awt.Color(0, 0, 0));
+        B4.setText("D4");
+        B4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(B4);
+
+        jButton14.setBackground(new java.awt.Color(51, 255, 51));
+        jButton14.setForeground(new java.awt.Color(0, 0, 0));
+        jButton14.setText("C5");
+        jButton14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton14);
+
+        jButton15.setBackground(new java.awt.Color(51, 255, 51));
+        jButton15.setForeground(new java.awt.Color(0, 0, 0));
+        jButton15.setText("D5");
+        jButton15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton15);
+
+        jButton16.setBackground(new java.awt.Color(51, 255, 51));
+        jButton16.setForeground(new java.awt.Color(0, 0, 0));
+        jButton16.setText("C6");
+        jButton16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton16);
+
+        B6.setBackground(new java.awt.Color(51, 255, 51));
+        B6.setForeground(new java.awt.Color(0, 0, 0));
+        B6.setText("D6");
+        B6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(B6);
+
+        jButton18.setBackground(new java.awt.Color(51, 255, 51));
+        jButton18.setForeground(new java.awt.Color(0, 0, 0));
+        jButton18.setText("C7");
+        jButton18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton18);
+
+        jButton19.setBackground(new java.awt.Color(51, 255, 51));
+        jButton19.setForeground(new java.awt.Color(0, 0, 0));
+        jButton19.setText("D7");
+        jButton19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton19);
+
+        jButton20.setBackground(new java.awt.Color(51, 255, 51));
+        jButton20.setForeground(new java.awt.Color(0, 0, 0));
+        jButton20.setText("C8");
+        jButton20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton20);
+
+        jButton21.setBackground(new java.awt.Color(51, 255, 51));
+        jButton21.setForeground(new java.awt.Color(0, 0, 0));
+        jButton21.setText("D8");
+        jButton21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton21);
+
+        jButton22.setBackground(new java.awt.Color(51, 255, 51));
+        jButton22.setForeground(new java.awt.Color(0, 0, 0));
+        jButton22.setText("C9");
+        jButton22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton22);
+
+        jButton23.setBackground(new java.awt.Color(51, 255, 51));
+        jButton23.setForeground(new java.awt.Color(0, 0, 0));
+        jButton23.setText("D9");
+        jButton23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton23);
+
+        jButton24.setBackground(new java.awt.Color(51, 255, 51));
+        jButton24.setForeground(new java.awt.Color(0, 0, 0));
+        jButton24.setText("C10");
+        jButton24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton24);
+
+        jButton25.setBackground(new java.awt.Color(51, 255, 51));
+        jButton25.setForeground(new java.awt.Color(0, 0, 0));
+        jButton25.setText("D10");
+        jButton25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton25);
+
+        jButton26.setBackground(new java.awt.Color(51, 255, 51));
+        jButton26.setForeground(new java.awt.Color(0, 0, 0));
+        jButton26.setText("C11");
+        jButton26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton26);
+
+        B11.setBackground(new java.awt.Color(51, 255, 51));
+        B11.setForeground(new java.awt.Color(0, 0, 0));
+        B11.setText("D11");
+        B11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(B11);
+
+        jButton28.setBackground(new java.awt.Color(51, 255, 51));
+        jButton28.setForeground(new java.awt.Color(0, 0, 0));
+        jButton28.setText("C12");
+        jButton28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton28);
+
+        jButton29.setBackground(new java.awt.Color(51, 255, 51));
+        jButton29.setForeground(new java.awt.Color(0, 0, 0));
+        jButton29.setText("D12");
+        jButton29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton29);
+
+        jButton30.setBackground(new java.awt.Color(51, 255, 51));
+        jButton30.setForeground(new java.awt.Color(0, 0, 0));
+        jButton30.setText("C13");
+        jButton30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton30);
+
+        jButton31.setBackground(new java.awt.Color(51, 255, 51));
+        jButton31.setForeground(new java.awt.Color(0, 0, 0));
+        jButton31.setText("D13");
+        jButton31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton31);
+
+        jButton32.setBackground(new java.awt.Color(51, 255, 51));
+        jButton32.setForeground(new java.awt.Color(0, 0, 0));
+        jButton32.setText("C14");
+        jButton32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton32);
+
+        jButton33.setBackground(new java.awt.Color(51, 255, 51));
+        jButton33.setForeground(new java.awt.Color(0, 0, 0));
+        jButton33.setText("D14");
+        jButton33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton33);
+
+        jButton34.setBackground(new java.awt.Color(51, 255, 51));
+        jButton34.setForeground(new java.awt.Color(0, 0, 0));
+        jButton34.setText("C15");
+        jButton34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton34);
+
+        jButton35.setBackground(new java.awt.Color(51, 255, 51));
+        jButton35.setForeground(new java.awt.Color(0, 0, 0));
+        jButton35.setText("D15");
+        jButton35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton35);
+
+        jButton36.setBackground(new java.awt.Color(51, 255, 51));
+        jButton36.setForeground(new java.awt.Color(0, 0, 0));
+        jButton36.setText("C16");
+        jButton36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton36);
+
+        jButton37.setBackground(new java.awt.Color(51, 255, 51));
+        jButton37.setForeground(new java.awt.Color(0, 0, 0));
+        jButton37.setText("D16");
+        jButton37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton37);
+
+        A17.setBackground(new java.awt.Color(51, 255, 51));
+        A17.setForeground(new java.awt.Color(0, 0, 0));
+        A17.setText("C17");
+        A17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(A17);
+
+        jButton39.setBackground(new java.awt.Color(51, 255, 51));
+        jButton39.setForeground(new java.awt.Color(0, 0, 0));
+        jButton39.setText("D17");
+        jButton39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton39);
+
+        jButton40.setBackground(new java.awt.Color(51, 255, 51));
+        jButton40.setForeground(new java.awt.Color(0, 0, 0));
+        jButton40.setText("C18");
+        jButton40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton40);
+
+        jButton41.setBackground(new java.awt.Color(51, 255, 51));
+        jButton41.setForeground(new java.awt.Color(0, 0, 0));
+        jButton41.setText("D18");
+        jButton41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton41);
+
+        A19.setBackground(new java.awt.Color(51, 255, 51));
+        A19.setForeground(new java.awt.Color(0, 0, 0));
+        A19.setText("C19");
+        A19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(A19);
+
+        B19.setBackground(new java.awt.Color(51, 255, 51));
+        B19.setForeground(new java.awt.Color(0, 0, 0));
+        B19.setText("D19");
+        B19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(B19);
+
+        jButton44.setBackground(new java.awt.Color(51, 255, 51));
+        jButton44.setForeground(new java.awt.Color(0, 0, 0));
+        jButton44.setText("C20");
+        jButton44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton44);
+
+        jButton45.setBackground(new java.awt.Color(51, 255, 51));
+        jButton45.setForeground(new java.awt.Color(0, 0, 0));
+        jButton45.setText("D20");
+        jButton45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats.add(jButton45);
+
+        seatsPanell.add(abSectionSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 140, 610));
+
+        abSectionSeats1.setBackground(new java.awt.Color(255, 255, 255));
+        abSectionSeats1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        abSectionSeats1.setForeground(new java.awt.Color(0, 0, 0));
+        abSectionSeats1.setLayout(new java.awt.GridLayout(20, 2, 3, 3));
+
+        jButton7.setBackground(new java.awt.Color(51, 255, 51));
+        jButton7.setForeground(new java.awt.Color(0, 0, 0));
+        jButton7.setText("A1");
+        jButton7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton7);
+
+        B2.setBackground(new java.awt.Color(51, 255, 51));
+        B2.setForeground(new java.awt.Color(0, 0, 0));
+        B2.setText("B1");
+        B2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(B2);
+
+        jButton13.setBackground(new java.awt.Color(51, 255, 51));
+        jButton13.setForeground(new java.awt.Color(0, 0, 0));
+        jButton13.setText("A2");
+        jButton13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton13);
+
+        jButton17.setBackground(new java.awt.Color(51, 255, 51));
+        jButton17.setForeground(new java.awt.Color(0, 0, 0));
+        jButton17.setText("B2");
+        jButton17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+        abSectionSeats1.add(jButton17);
+
+        jButton27.setBackground(new java.awt.Color(51, 255, 51));
+        jButton27.setForeground(new java.awt.Color(0, 0, 0));
+        jButton27.setText("A3");
+        jButton27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton27);
+
+        jButton38.setBackground(new java.awt.Color(51, 255, 51));
+        jButton38.setForeground(new java.awt.Color(0, 0, 0));
+        jButton38.setText("B3");
+        jButton38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton38);
+
+        jButton42.setBackground(new java.awt.Color(51, 255, 51));
+        jButton42.setForeground(new java.awt.Color(0, 0, 0));
+        jButton42.setText("A4");
+        jButton42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton42);
+
+        B5.setBackground(new java.awt.Color(51, 255, 51));
+        B5.setForeground(new java.awt.Color(0, 0, 0));
+        B5.setText("B4");
+        B5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(B5);
+
+        jButton43.setBackground(new java.awt.Color(51, 255, 51));
+        jButton43.setForeground(new java.awt.Color(0, 0, 0));
+        jButton43.setText("A5");
+        jButton43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton43);
+
+        jButton46.setBackground(new java.awt.Color(51, 255, 51));
+        jButton46.setForeground(new java.awt.Color(0, 0, 0));
+        jButton46.setText("B5");
+        jButton46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton46);
+
+        jButton47.setBackground(new java.awt.Color(51, 255, 51));
+        jButton47.setForeground(new java.awt.Color(0, 0, 0));
+        jButton47.setText("A6");
+        jButton47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton47);
+
+        B7.setBackground(new java.awt.Color(51, 255, 51));
+        B7.setForeground(new java.awt.Color(0, 0, 0));
+        B7.setText("B6");
+        B7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(B7);
+
+        jButton48.setBackground(new java.awt.Color(51, 255, 51));
+        jButton48.setForeground(new java.awt.Color(0, 0, 0));
+        jButton48.setText("A7");
+        jButton48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton48);
+
+        jButton49.setBackground(new java.awt.Color(51, 255, 51));
+        jButton49.setForeground(new java.awt.Color(0, 0, 0));
+        jButton49.setText("B7");
+        jButton49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton49);
+
+        jButton50.setBackground(new java.awt.Color(51, 255, 51));
+        jButton50.setForeground(new java.awt.Color(0, 0, 0));
+        jButton50.setText("A8");
+        jButton50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton50);
+
+        jButton51.setBackground(new java.awt.Color(51, 255, 51));
+        jButton51.setForeground(new java.awt.Color(0, 0, 0));
+        jButton51.setText("B8");
+        jButton51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton51);
+
+        jButton52.setBackground(new java.awt.Color(51, 255, 51));
+        jButton52.setForeground(new java.awt.Color(0, 0, 0));
+        jButton52.setText("A9");
+        jButton52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton52);
+
+        jButton53.setBackground(new java.awt.Color(51, 255, 51));
+        jButton53.setForeground(new java.awt.Color(0, 0, 0));
+        jButton53.setText("B9");
+        jButton53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton53);
+
+        jButton54.setBackground(new java.awt.Color(51, 255, 51));
+        jButton54.setForeground(new java.awt.Color(0, 0, 0));
+        jButton54.setText("A10");
+        jButton54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton54);
+
+        jButton55.setBackground(new java.awt.Color(51, 255, 51));
+        jButton55.setForeground(new java.awt.Color(0, 0, 0));
+        jButton55.setText("B10");
+        jButton55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton55);
+
+        jButton56.setBackground(new java.awt.Color(51, 255, 51));
+        jButton56.setForeground(new java.awt.Color(0, 0, 0));
+        jButton56.setText("A11");
+        jButton56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton56);
+
+        B12.setBackground(new java.awt.Color(51, 255, 51));
+        B12.setForeground(new java.awt.Color(0, 0, 0));
+        B12.setText("B11");
+        B12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(B12);
+
+        jButton57.setBackground(new java.awt.Color(51, 255, 51));
+        jButton57.setForeground(new java.awt.Color(0, 0, 0));
+        jButton57.setText("A12");
+        jButton57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton57);
+
+        jButton58.setBackground(new java.awt.Color(51, 255, 51));
+        jButton58.setForeground(new java.awt.Color(0, 0, 0));
+        jButton58.setText("B12");
+        jButton58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton58);
+
+        jButton59.setBackground(new java.awt.Color(51, 255, 51));
+        jButton59.setForeground(new java.awt.Color(0, 0, 0));
+        jButton59.setText("A13");
+        jButton59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton59);
+
+        jButton60.setBackground(new java.awt.Color(51, 255, 51));
+        jButton60.setForeground(new java.awt.Color(0, 0, 0));
+        jButton60.setText("B13");
+        jButton60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton60);
+
+        jButton61.setBackground(new java.awt.Color(51, 255, 51));
+        jButton61.setForeground(new java.awt.Color(0, 0, 0));
+        jButton61.setText("A14");
+        jButton61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton61);
+
+        jButton62.setBackground(new java.awt.Color(51, 255, 51));
+        jButton62.setForeground(new java.awt.Color(0, 0, 0));
+        jButton62.setText("B14");
+        jButton62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton62);
+
+        jButton63.setBackground(new java.awt.Color(51, 255, 51));
+        jButton63.setForeground(new java.awt.Color(0, 0, 0));
+        jButton63.setText("A15");
+        jButton63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton63);
+
+        jButton64.setBackground(new java.awt.Color(51, 255, 51));
+        jButton64.setForeground(new java.awt.Color(0, 0, 0));
+        jButton64.setText("B15");
+        jButton64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton64);
+
+        jButton65.setBackground(new java.awt.Color(51, 255, 51));
+        jButton65.setForeground(new java.awt.Color(0, 0, 0));
+        jButton65.setText("A16");
+        jButton65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton65);
+
+        jButton66.setBackground(new java.awt.Color(51, 255, 51));
+        jButton66.setForeground(new java.awt.Color(0, 0, 0));
+        jButton66.setText("B16");
+        jButton66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton66);
+
+        A18.setBackground(new java.awt.Color(51, 255, 51));
+        A18.setForeground(new java.awt.Color(0, 0, 0));
+        A18.setText("A17");
+        A18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(A18);
+
+        jButton67.setBackground(new java.awt.Color(51, 255, 51));
+        jButton67.setForeground(new java.awt.Color(0, 0, 0));
+        jButton67.setText("B17");
+        jButton67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton67);
+
+        jButton68.setBackground(new java.awt.Color(51, 255, 51));
+        jButton68.setForeground(new java.awt.Color(0, 0, 0));
+        jButton68.setText("A18");
+        jButton68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton68);
+
+        jButton69.setBackground(new java.awt.Color(51, 255, 51));
+        jButton69.setForeground(new java.awt.Color(0, 0, 0));
+        jButton69.setText("B18");
+        jButton69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton69);
+
+        A20.setBackground(new java.awt.Color(51, 255, 51));
+        A20.setForeground(new java.awt.Color(0, 0, 0));
+        A20.setText("A19");
+        A20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(A20);
+
+        B20.setBackground(new java.awt.Color(51, 255, 51));
+        B20.setForeground(new java.awt.Color(0, 0, 0));
+        B20.setText("B19");
+        B20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(B20);
+
+        jButton70.setBackground(new java.awt.Color(51, 255, 51));
+        jButton70.setForeground(new java.awt.Color(0, 0, 0));
+        jButton70.setText("A20");
+        jButton70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton70);
+
+        jButton71.setBackground(new java.awt.Color(51, 255, 51));
+        jButton71.setForeground(new java.awt.Color(0, 0, 0));
+        jButton71.setText("B20");
+        jButton71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        abSectionSeats1.add(jButton71);
+
+        seatsPanell.add(abSectionSeats1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 610));
+
+        seatsScrollPane.setViewportView(seatsPanell);
+
+        manageSeatsPanel.add(seatsScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 330, 620));
 
         tabPanel.addTab("tab5", manageSeatsPanel);
 
@@ -1759,49 +1962,57 @@ public class AdminFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addOfferButtonActionPerformed
 
-    private void addOfferButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton1ActionPerformed
+    private void editSelectedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editSelectedButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton1ActionPerformed
+    }//GEN-LAST:event_editSelectedButtonActionPerformed
 
-    private void addOfferButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton2ActionPerformed
+    private void addScheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addScheduleButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton2ActionPerformed
+    }//GEN-LAST:event_addScheduleButtonActionPerformed
 
-    private void addOfferButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton3ActionPerformed
+    private void deleteSelectedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteSelectedButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton3ActionPerformed
+    }//GEN-LAST:event_deleteSelectedButtonActionPerformed
 
-    private void addOfferButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton4ActionPerformed
+    private void viewSelectedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewSelectedButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton4ActionPerformed
+    }//GEN-LAST:event_viewSelectedButtonActionPerformed
 
-    private void addOfferButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton5ActionPerformed
+    private void approveHistoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approveHistoryButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton5ActionPerformed
+    }//GEN-LAST:event_approveHistoryButtonActionPerformed
 
-    private void addOfferButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton6ActionPerformed
+    private void cancelSelectedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelSelectedButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton6ActionPerformed
+    }//GEN-LAST:event_cancelSelectedButtonActionPerformed
 
-    private void addOfferButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton7ActionPerformed
+    private void approveSelectedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approveSelectedButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton7ActionPerformed
+    }//GEN-LAST:event_approveSelectedButtonActionPerformed
 
-    private void addOfferButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton8ActionPerformed
+    private void backToBookingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToBookingsButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton8ActionPerformed
+    }//GEN-LAST:event_backToBookingsButtonActionPerformed
 
-    private void addOfferButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton9ActionPerformed
+    private void backToButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton9ActionPerformed
+    }//GEN-LAST:event_backToButtonActionPerformed
 
-    private void addOfferButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton10ActionPerformed
+    private void viewSelectedButtonSeatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewSelectedButtonSeatsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addOfferButton10ActionPerformed
+    }//GEN-LAST:event_viewSelectedButtonSeatsActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void userProfileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userProfileButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userProfileButtonActionPerformed
     
     
     private void startDateTime() {
@@ -1858,70 +2069,96 @@ public class AdminFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton A17;
+    private javax.swing.JButton A18;
+    private javax.swing.JButton A19;
+    private javax.swing.JButton A20;
+    private javax.swing.JButton B1;
+    private javax.swing.JButton B11;
+    private javax.swing.JButton B12;
+    private javax.swing.JButton B19;
+    private javax.swing.JButton B2;
+    private javax.swing.JButton B20;
+    private javax.swing.JButton B4;
+    private javax.swing.JButton B5;
+    private javax.swing.JButton B6;
+    private javax.swing.JButton B7;
+    private javax.swing.JPanel abSectionSeats;
+    private javax.swing.JPanel abSectionSeats1;
     private javax.swing.JLabel activeFlights;
     private javax.swing.JLabel activeFlightsLabel;
     private javax.swing.JPanel activeFlightsPanel;
     private javax.swing.JButton addFlightButton;
     private javax.swing.JPanel addFlightDetailsPanel;
     private javax.swing.JPanel addFlightOfferPanel;
+    private javax.swing.JPanel addFlightSchedulePanel;
     private javax.swing.JButton addOfferButton;
-    private javax.swing.JButton addOfferButton1;
-    private javax.swing.JButton addOfferButton10;
-    private javax.swing.JButton addOfferButton2;
-    private javax.swing.JButton addOfferButton3;
-    private javax.swing.JButton addOfferButton4;
-    private javax.swing.JButton addOfferButton5;
-    private javax.swing.JButton addOfferButton6;
-    private javax.swing.JButton addOfferButton7;
-    private javax.swing.JButton addOfferButton8;
-    private javax.swing.JButton addOfferButton9;
+    private javax.swing.JButton addScheduleButton;
     private javax.swing.JButton airAsiaButton;
     private javax.swing.JComboBox<String> aircraftModel;
     private javax.swing.JLabel aircraftModelLabel;
+    private javax.swing.JComboBox<String> airline;
+    private javax.swing.JLabel airlineLabel;
     private javax.swing.JLabel airlineSelectorLabel;
     private javax.swing.JPanel airlineSelectorPanel;
     private javax.swing.JComboBox<String> amenity;
     private javax.swing.JLabel amenityLabel;
+    private javax.swing.JLabel approveBookingsHistoryLabel;
+    private javax.swing.JButton approveHistoryButton;
+    private javax.swing.JButton approveSelectedButton;
     private javax.swing.JPanel approvedBookingsHistory;
+    private javax.swing.JScrollPane approvedBookingsScrollPane;
+    private javax.swing.JTable approvedBookingsTable;
     private javax.swing.JButton backButton;
+    private javax.swing.JButton backToBookingsButton;
+    private javax.swing.JButton backToButton;
     private javax.swing.JTextField baseFare;
     private javax.swing.JLabel baseFareLabel;
+    private javax.swing.JLabel bookingID;
     private javax.swing.JPanel bookingsMainPanel;
     private javax.swing.JPanel bookingsPanel;
     private javax.swing.JComboBox<String> cabinClass;
     private javax.swing.JLabel cabinClassLabel;
+    private javax.swing.JButton cancelSelectedButton;
+    private javax.swing.JLabel category;
+    private javax.swing.JLabel categoryLabel;
     private javax.swing.JButton cebGoButton;
     private javax.swing.JButton dashboardButton;
     private javax.swing.JPanel dashboardPanel;
+    private com.toedter.calendar.JDateChooser dateChooserSchedule;
     private javax.swing.JLabel dateLabel;
+    private javax.swing.JLabel dateLabelSeats;
+    private javax.swing.JLabel dateScheduleLabel;
     private javax.swing.JLabel datetimeLabel;
     private javax.swing.JPanel datetimePanel;
     private javax.swing.JButton deleteButton;
+    private javax.swing.JButton deleteSelectedButton;
+    private javax.swing.JLabel departureLabel;
     private javax.swing.JComboBox<String> destination;
+    private javax.swing.JComboBox<String> destinationComboBox;
     private javax.swing.JLabel destinationLabel;
-    private javax.swing.JLabel destinationLabel1;
-    private javax.swing.JLabel destinationLabel2;
-    private javax.swing.JLabel destinationLabel3;
-    private javax.swing.JLabel destinationLabel4;
+    private javax.swing.JLabel destinationLabelSeats;
+    private javax.swing.JComboBox<String> destinationSchedule;
+    private javax.swing.JLabel destinationScheduleLabel;
+    private javax.swing.JLabel detailsLabel;
     private javax.swing.JTextField duration;
     private javax.swing.JLabel durationLabel;
     private javax.swing.JButton editButton;
+    private javax.swing.JButton editSelectedButton;
     private javax.swing.JComboBox<String> entertainment;
     private javax.swing.JLabel entertainmentLabel;
     private javax.swing.JTextField flightCode;
-    private javax.swing.JTextField flightCode1;
     private javax.swing.JLabel flightCodeLabel;
+    private javax.swing.JTextField flightCodeSchedule;
+    private javax.swing.JLabel flightCodeScheduleLabel;
+    private javax.swing.JLabel flightDate;
+    private javax.swing.JLabel flightDateLabel;
     private javax.swing.JPanel flightMaker;
     private javax.swing.JTable flightTable;
     private javax.swing.JComboBox<String> foodAndBeverages;
-    private javax.swing.JComboBox<String> foodAndBeverages2;
-    private javax.swing.JComboBox<String> foodAndBeverages3;
-    private javax.swing.JComboBox<String> foodAndBeverages4;
-    private javax.swing.JComboBox<String> foodAndBeverages5;
-    private javax.swing.JComboBox<String> foodAndBeverages6;
-    private javax.swing.JComboBox<String> foodAndBeverages7;
     private javax.swing.JLabel foodAndBeveragesLabel;
     private javax.swing.JLabel headerLabel;
+    private javax.swing.JSpinner hourTimeSchedule;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1987,118 +2224,95 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton70;
     private javax.swing.JButton jButton71;
-    private javax.swing.JButton jButton72;
-    private javax.swing.JButton jButton73;
-    private javax.swing.JButton jButton74;
-    private javax.swing.JButton jButton75;
-    private javax.swing.JButton jButton76;
-    private javax.swing.JButton jButton77;
-    private javax.swing.JButton jButton78;
-    private javax.swing.JButton jButton79;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton80;
-    private javax.swing.JButton jButton81;
-    private javax.swing.JButton jButton82;
-    private javax.swing.JButton jButton83;
-    private javax.swing.JButton jButton84;
-    private javax.swing.JButton jButton85;
     private javax.swing.JButton jButton9;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTable jTable5;
+    private javax.swing.JButton logOutButton;
     private javax.swing.JButton manageBookingsButton;
     private javax.swing.JLabel manageBookingsHeaderLabel;
     private javax.swing.JPanel manageBookingsHeaderPanel;
     private javax.swing.JPanel manageBookingsPanel;
+    private javax.swing.JScrollPane manageBookingsScrollPane;
+    private javax.swing.JTable manageBookingsTable;
     private javax.swing.JButton manageFlightsButton;
     private javax.swing.JLabel manageFlightsHeaderLabel;
-    private javax.swing.JLabel manageFlightsHeaderLabel1;
     private javax.swing.JPanel manageFlightsHeaderPanel;
-    private javax.swing.JPanel manageFlightsHeaderPanel1;
     private javax.swing.JPanel manageFlightsPanel;
+    private javax.swing.JLabel manageScheduleHeaderLabel;
+    private javax.swing.JPanel manageScheduleHeaderPanel;
     private javax.swing.JPanel manageSchedulePanel;
     private javax.swing.JButton manageSchedulesButton;
+    private javax.swing.JPanel manageSeats;
     private javax.swing.JButton manageSeatsButton;
     private javax.swing.JLabel manageSeatsHeaderLabel;
     private javax.swing.JPanel manageSeatsHeaderPanel;
     private javax.swing.JPanel manageSeatsPanel;
+    private javax.swing.JScrollPane manageSeatsScrollPane;
+    private javax.swing.JSpinner minuteScheduleLabel;
     private javax.swing.JTextArea moreDetails;
     private javax.swing.JLabel moreDetailsLabel;
+    private javax.swing.JLabel noOfPassenger;
+    private javax.swing.JLabel noOfPassengerLabel;
     private javax.swing.JComboBox<String> origin;
+    private javax.swing.JComboBox<String> originComboBox;
     private javax.swing.JLabel originLabel;
+    private javax.swing.JLabel originLabelSeats;
+    private javax.swing.JComboBox<String> originSchedule;
+    private javax.swing.JLabel originScheduleLabel;
+    private javax.swing.JLabel otherInfoLabel;
     private javax.swing.JButton palButton;
+    private javax.swing.JLabel passengersBookedLabel;
+    private javax.swing.JLabel passengersName;
     private javax.swing.JLabel passengersToday;
     private javax.swing.JLabel passengersTodayLabel;
     private javax.swing.JPanel passengersTodayPanel;
+    private javax.swing.JLabel paymentLabel;
+    private javax.swing.JLabel paymentMode;
     private javax.swing.JPanel personalBookingDetails;
+    private javax.swing.JLabel profilePhotoLabel;
+    private javax.swing.JPanel profilePhotoPanel;
     private javax.swing.JLabel recentFlightsLabel;
-    private javax.swing.JLabel recentFlightsLabel1;
     private javax.swing.JPanel recentFlightsPanel;
+    private javax.swing.JLabel route;
+    private javax.swing.JLabel routeLabel;
+    private javax.swing.JTextField scheduleID;
+    private javax.swing.JPanel scheduledFlightsPanel;
+    private javax.swing.JScrollPane scheduledFlightsScrollPane;
+    private javax.swing.JTable scheduledFlightsTable;
+    private javax.swing.JLabel searchScheduleLabel;
     private javax.swing.JTextField seatCapacity;
     private javax.swing.JLabel seatCapacityLabel;
     private javax.swing.JComboBox<String> seatType;
     private javax.swing.JLabel seatTypeLabel;
-    private javax.swing.JLabel seatTypeLabel1;
-    private javax.swing.JLabel seatTypeLabel10;
-    private javax.swing.JLabel seatTypeLabel11;
-    private javax.swing.JLabel seatTypeLabel12;
-    private javax.swing.JLabel seatTypeLabel13;
-    private javax.swing.JLabel seatTypeLabel14;
-    private javax.swing.JLabel seatTypeLabel15;
-    private javax.swing.JLabel seatTypeLabel16;
-    private javax.swing.JLabel seatTypeLabel17;
-    private javax.swing.JLabel seatTypeLabel18;
-    private javax.swing.JLabel seatTypeLabel19;
-    private javax.swing.JLabel seatTypeLabel2;
-    private javax.swing.JLabel seatTypeLabel20;
-    private javax.swing.JLabel seatTypeLabel21;
-    private javax.swing.JLabel seatTypeLabel22;
-    private javax.swing.JLabel seatTypeLabel23;
-    private javax.swing.JLabel seatTypeLabel24;
-    private javax.swing.JLabel seatTypeLabel25;
-    private javax.swing.JLabel seatTypeLabel26;
-    private javax.swing.JLabel seatTypeLabel3;
-    private javax.swing.JLabel seatTypeLabel4;
-    private javax.swing.JLabel seatTypeLabel5;
-    private javax.swing.JLabel seatTypeLabel6;
-    private javax.swing.JLabel seatTypeLabel7;
-    private javax.swing.JLabel seatTypeLabel8;
-    private javax.swing.JLabel seatTypeLabel9;
+    private javax.swing.JLabel seats;
+    private com.toedter.calendar.JDateChooser seatsDateChooser;
+    private javax.swing.JLabel seatsLabel;
+    private javax.swing.JPanel seatsPanell;
+    private javax.swing.JScrollPane seatsScrollPane;
+    private javax.swing.JTable seatsTable;
     private javax.swing.JLabel selectedAirline;
     private javax.swing.JLabel selectedAirlineLabel;
-    private javax.swing.JLabel selectedAirlineLabel1;
-    private javax.swing.JLabel selectedAirlineLabel2;
     private javax.swing.JPanel selectedAirlinePanel;
     private javax.swing.JPanel sidePanel;
     private javax.swing.JTabbedPane tabPanel;
     private javax.swing.JScrollPane tableScrollPane;
     private javax.swing.JLabel timeLabel;
+    private javax.swing.JLabel timeScheduleLabel;
     private javax.swing.JPanel topPanel;
     private javax.swing.JLabel totalRevenue;
     private javax.swing.JLabel totalRevenueLabel;
     private javax.swing.JPanel totalRevenuePanel;
+    private javax.swing.JLabel userAddress;
+    private javax.swing.JLabel userAddressLabel;
+    private javax.swing.JPanel userDetailsPanel;
+    private javax.swing.JLabel userName;
+    private javax.swing.JButton userProfileButton;
+    private javax.swing.JLabel userRequest;
+    private javax.swing.JLabel username;
+    private javax.swing.JButton viewSelectedButton;
+    private javax.swing.JButton viewSelectedButtonSeats;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }
