@@ -28,14 +28,14 @@ public class LogInFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        welcomeLabel = new javax.swing.JLabel();
+        signInLabel = new javax.swing.JLabel();
+        userNameTextField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
+        usernameLabel = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
+        registerButton = new javax.swing.JButton();
+        logInButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1200, 800));
@@ -44,47 +44,51 @@ public class LogInFrame extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(11, 56, 118));
-        jLabel1.setText("Welcome Back!");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 320, -1));
+        welcomeLabel.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        welcomeLabel.setForeground(new java.awt.Color(11, 56, 118));
+        welcomeLabel.setText("Welcome Back!");
+        jPanel1.add(welcomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 320, -1));
 
-        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("Sign in to your account");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 210, 50));
+        signInLabel.setFont(new java.awt.Font("SansSerif", 0, 20)); // NOI18N
+        signInLabel.setForeground(new java.awt.Color(102, 102, 102));
+        signInLabel.setText("Sign in to your account");
+        jPanel1.add(signInLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 210, 50));
 
-        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 450, 50));
+        userNameTextField.setBackground(new java.awt.Color(255, 255, 255));
+        userNameTextField.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        userNameTextField.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(userNameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 450, 50));
 
-        jPasswordField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 450, 50));
+        passwordField.setBackground(new java.awt.Color(255, 255, 255));
+        passwordField.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        passwordField.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 450, 50));
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(11, 56, 118));
-        jLabel3.setText("Username");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 70, 30));
+        usernameLabel.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        usernameLabel.setForeground(new java.awt.Color(11, 56, 118));
+        usernameLabel.setText("Username");
+        jPanel1.add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 70, 30));
 
-        jLabel4.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(11, 56, 118));
-        jLabel4.setText("Password");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 70, 30));
+        passwordLabel.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        passwordLabel.setForeground(new java.awt.Color(11, 56, 118));
+        passwordLabel.setText("Password");
+        jPanel1.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 70, 30));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(11, 56, 118));
-        jButton1.setText("Don't have an account? Register");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 560, 450, 50));
+        registerButton.setBackground(new java.awt.Color(255, 255, 255));
+        registerButton.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        registerButton.setForeground(new java.awt.Color(11, 56, 118));
+        registerButton.setText("Don't have an account? Register");
+        registerButton.setBorderPainted(false);
+        registerButton.setContentAreaFilled(false);
+        registerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 560, 450, 50));
 
-        jButton2.setBackground(new java.awt.Color(11, 56, 118));
-        jButton2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Log In");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 450, 50));
+        logInButton.setBackground(new java.awt.Color(11, 56, 118));
+        logInButton.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        logInButton.setForeground(new java.awt.Color(255, 255, 255));
+        logInButton.setText("Log In");
+        logInButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(logInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 450, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 800));
 
@@ -127,14 +131,14 @@ public class LogInFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton logInButton;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JButton registerButton;
+    private javax.swing.JLabel signInLabel;
+    private javax.swing.JTextField userNameTextField;
+    private javax.swing.JLabel usernameLabel;
+    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }
