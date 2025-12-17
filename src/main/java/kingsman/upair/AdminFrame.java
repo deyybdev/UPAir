@@ -33,8 +33,9 @@ public class AdminFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton3 = new javax.swing.JButton();
         topPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        headerLabel = new javax.swing.JLabel();
         sidePanel = new javax.swing.JPanel();
         dashboardButton = new javax.swing.JButton();
         manageFlightsButton = new javax.swing.JButton();
@@ -176,6 +177,26 @@ public class AdminFrame extends javax.swing.JFrame {
         selectedAirlineLabel2 = new javax.swing.JLabel();
         addOfferButton9 = new javax.swing.JButton();
         manageSeatsPanel = new javax.swing.JPanel();
+        manageSeatsHeaderPanel = new javax.swing.JPanel();
+        manageSeatsHeaderLabel = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        addOfferButton10 = new javax.swing.JButton();
+        destinationLabel1 = new javax.swing.JLabel();
+        flightCode1 = new javax.swing.JTextField();
+        destinationLabel2 = new javax.swing.JLabel();
+        destinationLabel3 = new javax.swing.JLabel();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        destinationLabel4 = new javax.swing.JLabel();
+        foodAndBeverages6 = new javax.swing.JComboBox<>();
+        foodAndBeverages7 = new javax.swing.JComboBox<>();
+
+        jButton3.setText("jButton3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -184,13 +205,13 @@ public class AdminFrame extends javax.swing.JFrame {
         topPanel.setForeground(new java.awt.Color(255, 255, 255));
         topPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Title.png")); // NOI18N
-        topPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
+        headerLabel.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
+        headerLabel.setForeground(new java.awt.Color(255, 255, 255));
+        headerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        headerLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Title.png")); // NOI18N
+        topPanel.add(headerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 60));
 
-        getContentPane().add(topPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 40));
+        getContentPane().add(topPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 60));
 
         sidePanel.setBackground(new java.awt.Color(11, 56, 118));
         sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -280,7 +301,7 @@ public class AdminFrame extends javax.swing.JFrame {
         });
         sidePanel.add(manageSeatsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 250, 40));
 
-        getContentPane().add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 250, 760));
+        getContentPane().add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 250, 740));
 
         dashboardPanel.setBackground(new java.awt.Color(204, 204, 204));
         dashboardPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1169,21 +1190,124 @@ public class AdminFrame extends javax.swing.JFrame {
         tabPanel.addTab("tab4", manageBookingsPanel);
 
         manageSeatsPanel.setBackground(new java.awt.Color(255, 255, 255));
+        manageSeatsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout manageSeatsPanelLayout = new javax.swing.GroupLayout(manageSeatsPanel);
-        manageSeatsPanel.setLayout(manageSeatsPanelLayout);
-        manageSeatsPanelLayout.setHorizontalGroup(
-            manageSeatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
+        manageSeatsHeaderPanel.setBackground(new java.awt.Color(204, 204, 204));
+        manageSeatsHeaderPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        manageSeatsHeaderPanel.setForeground(new java.awt.Color(255, 255, 255));
+        manageSeatsHeaderPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        manageSeatsHeaderLabel.setFont(new java.awt.Font("Bahnschrift", 1, 55)); // NOI18N
+        manageSeatsHeaderLabel.setForeground(new java.awt.Color(60, 63, 65));
+        manageSeatsHeaderLabel.setText("MANAGE SEATS");
+        manageSeatsHeaderPanel.add(manageSeatsHeaderLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 580, 60));
+
+        manageSeatsPanel.add(manageSeatsHeaderPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 910, 70));
+
+        jPanel6.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel7.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel7.setLayout(new java.awt.GridLayout(25, 2, 1, 0));
+        jPanel6.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 660));
+
+        jPanel8.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        manageSeatsPanelLayout.setVerticalGroup(
-            manageSeatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 765, Short.MAX_VALUE)
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
+
+        jPanel6.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 150, 670));
+
+        jScrollPane7.setViewportView(jPanel6);
+
+        manageSeatsPanel.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 340, 620));
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Manage Seats", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 15), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable5.setBackground(new java.awt.Color(255, 255, 255));
+        jTable5.setForeground(new java.awt.Color(0, 0, 0));
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Airline", "Flight Code", "Origin", "Destination", "Date", "Departure Time"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable5);
+
+        jPanel5.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 550, 370));
+
+        addOfferButton10.setBackground(new java.awt.Color(255, 255, 255));
+        addOfferButton10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        addOfferButton10.setForeground(new java.awt.Color(5, 20, 42));
+        addOfferButton10.setText("View Selected");
+        addOfferButton10.setBorder(null);
+        addOfferButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        addOfferButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        addOfferButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addOfferButton10ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(addOfferButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 580, 130, 30));
+
+        destinationLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        destinationLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        destinationLabel1.setText("Date");
+        jPanel5.add(destinationLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, 20));
+
+        flightCode1.setBackground(new java.awt.Color(255, 255, 255));
+        flightCode1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(flightCode1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 200, 40));
+
+        destinationLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        destinationLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        destinationLabel2.setText("Search Schedule ID:");
+        jPanel5.add(destinationLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, 40));
+
+        destinationLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        destinationLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        destinationLabel3.setText("Origin");
+        jPanel5.add(destinationLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, 20));
+        jPanel5.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 150, 40));
+
+        destinationLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        destinationLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        destinationLabel4.setText("Destination");
+        jPanel5.add(destinationLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, 20));
+
+        foodAndBeverages6.setBackground(new java.awt.Color(255, 255, 255));
+        foodAndBeverages6.setForeground(new java.awt.Color(0, 0, 0));
+        foodAndBeverages6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel5.add(foodAndBeverages6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 170, 40));
+
+        foodAndBeverages7.setBackground(new java.awt.Color(255, 255, 255));
+        foodAndBeverages7.setForeground(new java.awt.Color(0, 0, 0));
+        foodAndBeverages7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel5.add(foodAndBeverages7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 170, 40));
+
+        manageSeatsPanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 570, 620));
 
         tabPanel.addTab("tab5", manageSeatsPanel);
 
-        getContentPane().add(tabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 1, 950, 800));
+        getContentPane().add(tabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 21, 950, 780));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1275,6 +1399,10 @@ public class AdminFrame extends javax.swing.JFrame {
     private void addOfferButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addOfferButton9ActionPerformed
+
+    private void addOfferButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOfferButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addOfferButton10ActionPerformed
     
     
     private void startDateTime() {
@@ -1339,6 +1467,7 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JPanel addFlightOfferPanel;
     private javax.swing.JButton addOfferButton;
     private javax.swing.JButton addOfferButton1;
+    private javax.swing.JButton addOfferButton10;
     private javax.swing.JButton addOfferButton2;
     private javax.swing.JButton addOfferButton3;
     private javax.swing.JButton addOfferButton4;
@@ -1371,12 +1500,17 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JButton deleteButton;
     private javax.swing.JComboBox<String> destination;
     private javax.swing.JLabel destinationLabel;
+    private javax.swing.JLabel destinationLabel1;
+    private javax.swing.JLabel destinationLabel2;
+    private javax.swing.JLabel destinationLabel3;
+    private javax.swing.JLabel destinationLabel4;
     private javax.swing.JTextField duration;
     private javax.swing.JLabel durationLabel;
     private javax.swing.JButton editButton;
     private javax.swing.JComboBox<String> entertainment;
     private javax.swing.JLabel entertainmentLabel;
     private javax.swing.JTextField flightCode;
+    private javax.swing.JTextField flightCode1;
     private javax.swing.JLabel flightCodeLabel;
     private javax.swing.JPanel flightMaker;
     private javax.swing.JTable flightTable;
@@ -1385,25 +1519,36 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> foodAndBeverages3;
     private javax.swing.JComboBox<String> foodAndBeverages4;
     private javax.swing.JComboBox<String> foodAndBeverages5;
+    private javax.swing.JComboBox<String> foodAndBeverages6;
+    private javax.swing.JComboBox<String> foodAndBeverages7;
     private javax.swing.JLabel foodAndBeveragesLabel;
+    private javax.swing.JLabel headerLabel;
+    private javax.swing.JButton jButton3;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private javax.swing.JLabel jLabel1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
     private javax.swing.JButton manageBookingsButton;
     private javax.swing.JLabel manageBookingsHeaderLabel;
     private javax.swing.JPanel manageBookingsHeaderPanel;
@@ -1417,6 +1562,8 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JPanel manageSchedulePanel;
     private javax.swing.JButton manageSchedulesButton;
     private javax.swing.JButton manageSeatsButton;
+    private javax.swing.JLabel manageSeatsHeaderLabel;
+    private javax.swing.JPanel manageSeatsHeaderPanel;
     private javax.swing.JPanel manageSeatsPanel;
     private javax.swing.JTextArea moreDetails;
     private javax.swing.JLabel moreDetailsLabel;

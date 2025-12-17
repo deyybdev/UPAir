@@ -18,7 +18,7 @@ public class SplashScreen extends javax.swing.JFrame {
         setLocationRelativeTo(null);
 
         javax.swing.Timer timer = new javax.swing.Timer(5000, e -> {
-            new LogIn().setVisible(true);
+            new LogInFrame().setVisible(true);
             dispose();
         });
         timer.setRepeats(false);
@@ -57,7 +57,7 @@ public class SplashScreen extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windowa".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
