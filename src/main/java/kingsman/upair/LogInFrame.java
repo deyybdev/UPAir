@@ -4,8 +4,13 @@
  */
 package kingsman.upair;
 
+import javax.swing.JOptionPane;
+import kingsman.upair.repository.AdminRepository;
+import kingsman.upair.service.PassengerLoginService;
+
 /**
- *
+ * Login Frame for both passenger and admin login
+ * 
  * @author admin
  */
 public class LogInFrame extends javax.swing.JFrame {
@@ -16,6 +21,9 @@ public class LogInFrame extends javax.swing.JFrame {
     public LogInFrame() {
         initComponents();
         setLocationRelativeTo(null);
+        // Initialize admin data files if they don't exist
+        AdminRepository.initializeAdminData();
+        AdminRepository.initializeAdminPins();
     }
 
     /**
@@ -81,6 +89,11 @@ public class LogInFrame extends javax.swing.JFrame {
         registerButton.setBorderPainted(false);
         registerButton.setContentAreaFilled(false);
         registerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        registerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 560, 450, 50));
 
         logInButton.setBackground(new java.awt.Color(11, 56, 118));
@@ -88,12 +101,83 @@ public class LogInFrame extends javax.swing.JFrame {
         logInButton.setForeground(new java.awt.Color(255, 255, 255));
         logInButton.setText("Log In");
         logInButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        logInButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logInButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(logInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 450, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 800));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
+        // Navigate to registration frame
+        this.dispose();
+        new RegisterFrame().setVisible(true);
+    }//GEN-LAST:event_registerButtonActionPerformed
+
+    private void logInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInButtonActionPerformed
+        String username = userNameTextField.getText().trim();
+        String password = new String(passwordField.getPassword());
+        
+        if (username.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Please enter both username and password!", 
+                "Login Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        // Check if admin login
+        if (AdminRepository.validateAdmin(username, password)) {
+            // Request PIN verification
+            String pin = JOptionPane.showInputDialog(this, 
+                "Enter administration PIN (6 characters):", 
+                "Admin PIN Verification", 
+                JOptionPane.QUESTION_MESSAGE);
+            
+            if (pin == null || pin.trim().isEmpty()) {
+                return; // User cancelled
+            }
+            
+            pin = pin.trim();
+            if (pin.length() != 6) {
+                JOptionPane.showMessageDialog(this, 
+                    "PIN must be exactly 6 characters!", 
+                    "PIN Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            
+            // Validate and consume PIN
+            if (AdminRepository.validateAndConsumePin(pin)) {
+                int remainingPins = AdminRepository.getRemainingPinCount();
+                JOptionPane.showMessageDialog(this, 
+                    "PIN verified successfully!\nRemaining PINs: " + remainingPins, 
+                    "Success", JOptionPane.INFORMATION_MESSAGE);
+                
+                // Navigate to AdminFrame
+                this.dispose();
+                new AdminFrame().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, 
+                    "Invalid PIN! Please try again.", 
+                    "PIN Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            // Check passenger login
+            if (PassengerLoginService.validatePassenger(username, password)) {
+                // Navigate to PassengerFrame
+                this.dispose();
+                new PassengerFrame(username).setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, 
+                    "Invalid credentials! Please check your username and password.", 
+                    "Login Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_logInButtonActionPerformed
 
     /**
      * @param args the command line arguments

@@ -40,7 +40,7 @@ public class SplashScreen extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SplashScreenImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Documents\\NetBeansProjects\\UPAir\\src\\main\\java\\assets\\Splash Screen.png")); // NOI18N
+        SplashScreenImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/upairimage/Splash Screen.png"))); // NOI18N
         getContentPane().add(SplashScreenImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         pack();

@@ -4,8 +4,16 @@
  */
 package kingsman.upair;
 
+import javax.swing.JOptionPane;
+import kingsman.upair.model.Account;
+import kingsman.upair.model.Passenger;
+import kingsman.upair.service.RegistrationService;
+import kingsman.upair.utils.ValidationUtils;
+
 /**
- *
+ * Registration Frame for new passenger registration
+ * Uses service layer and model classes following OOP principles
+ * 
  * @author admin
  */
 public class RegisterFrame extends javax.swing.JFrame {
@@ -16,6 +24,192 @@ public class RegisterFrame extends javax.swing.JFrame {
     public RegisterFrame() {
         initComponents();
         setLocationRelativeTo(null);
+        populateIDTypeComboBox();
+    }
+    
+    /**
+     * Populates the ID Type combo box with Philippine ID types
+     */
+    private void populateIDTypeComboBox() {
+        idType.removeAllItems();
+        String[] idTypes = {
+            "Select ID Type",
+            "Driver's License",
+            "Passport",
+            "SSS ID",
+            "UMID",
+            "PhilHealth ID",
+            "Voter's ID",
+            "Senior Citizen ID",
+            "Student ID",
+            "TIN ID",
+            "Postal ID",
+            "National ID",
+            "Others"
+        };
+        for (String type : idTypes) {
+            idType.addItem(type);
+        }
+        idType.setSelectedIndex(0); // Select first item as default
+    }
+    
+    /**
+     * Validates all required fields are filled
+     * Uses ValidationUtils for validation logic
+     * @return true if all fields are valid, false otherwise
+     */
+    private boolean validateAllFields() {
+        // Check personal information
+        if (firstName.getText().trim().isEmpty()) {
+            showError("First Name is required!", firstName);
+            return false;
+        }
+        
+        if (lastName.getText().trim().isEmpty()) {
+            showError("Last Name is required!", lastName);
+            return false;
+        }
+        
+        if (cellphoneNumber.getText().trim().isEmpty()) {
+            showError("Cellphone Number is required!", cellphoneNumber);
+            return false;
+        }
+        
+        // Check address information
+        if (userProvince.getText().trim().isEmpty()) {
+            showError("Province is required!", userProvince);
+            return false;
+        }
+        
+        if (userCity.getText().trim().isEmpty()) {
+            showError("City/Municipality is required!", userCity);
+            return false;
+        }
+        
+        if (userBarangay.getText().trim().isEmpty()) {
+            showError("Barangay is required!", userBarangay);
+            return false;
+        }
+        
+        // Check identification
+        String selectedIDType = (String) idType.getSelectedItem();
+        if (selectedIDType == null || selectedIDType.equals("Select ID Type")) {
+            showError("Please select an ID Type!", idType);
+            return false;
+        }
+        
+        if (idNumber.getText().trim().isEmpty()) {
+            showError("ID Number is required!", idNumber);
+            return false;
+        }
+        
+        // Check account information
+        String username = userName.getText().trim();
+        if (username.isEmpty()) {
+            showError("Username is required!", userName);
+            return false;
+        }
+        
+        // Validate username format using ValidationUtils
+        ValidationUtils.ValidationResult usernameValidation = ValidationUtils.validateUsername(username);
+        if (!usernameValidation.isValid()) {
+            showError(usernameValidation.getMessage(), userName);
+            return false;
+        }
+        
+        String password = new String(userPassword.getPassword());
+        if (password.isEmpty()) {
+            showError("Password is required!", userPassword);
+            return false;
+        }
+        
+        // Validate password format using ValidationUtils
+        ValidationUtils.ValidationResult passwordValidation = ValidationUtils.validatePassword(password);
+        if (!passwordValidation.isValid()) {
+            showError(passwordValidation.getMessage(), userPassword);
+            return false;
+        }
+        
+        String confirmPassword = new String(userConfirmPassword.getPassword());
+        // Validate password match using RegistrationService
+        ValidationUtils.ValidationResult passwordMatchValidation = 
+            RegistrationService.validatePasswordConfirmation(password, confirmPassword);
+        if (!passwordMatchValidation.isValid()) {
+            showError(passwordMatchValidation.getMessage(), userConfirmPassword);
+            return false;
+        }
+        
+        return true;
+    }
+    
+    /**
+     * Helper method to show error message and focus on component
+     */
+    private void showError(String message, javax.swing.JComponent component) {
+        JOptionPane.showMessageDialog(this, message, "Validation Error", JOptionPane.ERROR_MESSAGE);
+        component.requestFocus();
+    }
+    
+    /**
+     * Handles the registration process using service layer
+     */
+    private void performRegistration() {
+        if (!validateAllFields()) {
+            return;
+        }
+        
+        // Create model objects
+        String username = userName.getText().trim();
+        Passenger passenger = new Passenger();
+        passenger.setUsername(username); // Set username first for validation
+        passenger.setFirstName(firstName.getText().trim());
+        passenger.setLastName(lastName.getText().trim());
+        passenger.setCellphoneNumber(cellphoneNumber.getText().trim());
+        passenger.setProvince(userProvince.getText().trim());
+        passenger.setCity(userCity.getText().trim());
+        passenger.setBarangay(userBarangay.getText().trim());
+        passenger.setIdType((String) idType.getSelectedItem());
+        passenger.setIdNumber(idNumber.getText().trim());
+        
+        Account account = new Account();
+        account.setUsername(username);
+        account.setPassword(new String(userPassword.getPassword()));
+        
+        // Use service layer for registration
+        RegistrationService.RegistrationResult result = 
+            RegistrationService.registerPassenger(passenger, account);
+        
+        if (result.isSuccess()) {
+            JOptionPane.showMessageDialog(this, result.getMessage(), 
+                "Success", JOptionPane.INFORMATION_MESSAGE);
+            
+            // Clear all fields
+            clearFields();
+            
+            // Return to login frame
+            this.dispose();
+            new LogInFrame().setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, result.getMessage(), 
+                "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    /**
+     * Clears all input fields
+     */
+    private void clearFields() {
+        firstName.setText("");
+        lastName.setText("");
+        cellphoneNumber.setText("");
+        userProvince.setText("");
+        userCity.setText("");
+        userBarangay.setText("");
+        idType.setSelectedIndex(0);
+        idNumber.setText("");
+        userName.setText("");
+        userPassword.setText("");
+        userConfirmPassword.setText("");
     }
 
     /**
@@ -145,7 +339,7 @@ public class RegisterFrame extends javax.swing.JFrame {
 
         idType.setBackground(new java.awt.Color(255, 255, 255));
         idType.setForeground(new java.awt.Color(0, 0, 0));
-        idType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        idType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select ID Type" }));
 
         idNumber.setBackground(new java.awt.Color(255, 255, 255));
         idNumber.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
@@ -186,6 +380,11 @@ public class RegisterFrame extends javax.swing.JFrame {
         registerButton.setBorderPainted(false);
         registerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         registerButton.setFocusPainted(false);
+        registerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerButtonActionPerformed(evt);
+            }
+        });
 
         backToLogInButton.setBackground(new java.awt.Color(255, 255, 255));
         backToLogInButton.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -350,8 +549,14 @@ public class RegisterFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backToLogInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToLogInButtonActionPerformed
-        // TODO add your handling code here:
+        // Return to login frame
+        this.dispose();
+        new LogInFrame().setVisible(true);
     }//GEN-LAST:event_backToLogInButtonActionPerformed
+
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
+        performRegistration();
+    }//GEN-LAST:event_registerButtonActionPerformed
 
     /**
      * @param args the command line arguments

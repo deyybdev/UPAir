@@ -1,0 +1,3 @@
+AirAsia|Daraga(DRP)|Manila(MNL)|4|Airbus A321|DG 6512|150|2000.0
+AirAsia|Daraga(DRP)|Manila(MNL)|4|Airbus A321|DG 6515|150|2000.0
+Cebu Pacific Go|Daraga(DRP)|Manila(MNL)|4|Airbus A321|DG 6517|150|2000.0

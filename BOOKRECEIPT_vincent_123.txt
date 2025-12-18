@@ -1,0 +1,51 @@
+============================================================
+           UPAIR AIRLINE BOOKING RECEIPT
+============================================================
+
+BOOKING INFORMATION
+------------------------------------------------------------
+Booking ID          : BK-20251218-111101-4568
+Booking Date        : 2025-12-18
+Booking Time        : 11:11:01
+Status              : Confirmed
+
+PASSENGER INFORMATION
+------------------------------------------------------------
+Name                : Jograt Valisteros
+Username            : vincent_123
+Contact             : 09157155561
+
+FLIGHT INFORMATION
+------------------------------------------------------------
+Trip Type           : One Way
+Airline             : AirAsia
+Flight Code         : DG 6515
+Route               : Daraga(DRP) → Manila(MNL)
+Departure Date      : 2025-12-18
+Departure Time      : 12:00
+
+PASSENGER DETAILS
+------------------------------------------------------------
+Passengers          : 1 Adult(s), 0 Minor(s)
+
+Seat Assignments:
+  A2        : Vincent
+
+PRICING DETAILS
+------------------------------------------------------------
+Base Fare (per person): PHP 2,000.00
+Adults              : 1
+Minors              : 0
+
+------------------------------------------------------------
+TOTAL AMOUNT        : PHP 2,600.00
+
+PAYMENT INFORMATION
+------------------------------------------------------------
+Payment Method      : Cash
+Payment Status      : Paid
+
+============================================================
+Thank you for choosing UPAir!
+For inquiries, please contact our customer service.
+============================================================
